@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+<!-------------------about--------------------------->
+<div id="about">
+    <div class="container">
+        
+            <h1 class="sub-title">E-Commerce Website - Early Wireframes</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2> Skills:</h2> <br>
+            <p>Wire-framing, Prototyping, Product Design, User Research, Figma</p> <br>
+            <h2>Project:</h2> <br>
+            <p>A major design project that is currently in the design phase is the overhaul of UCLA's E-Commerce websites. The new E-Commerce experience will be powered by Magento, and will combine various current platforms into a uniform, modern E-Commerce experience.</p>
+                <br>
+                <br>
+                <br>
+                <center><h2> Donation Page</h2> <br> 
+                <br> 
+            This is an early wireframe that displays the components of a giving page. The design combines two current UCLA sites. "Giveto UCLA" sites currently contain the call to action for giving to a specific cause, the actual donations are made in a separate page on giving.ucla.edu. The design above combines both into one central giving experience.</p></center>
+                <br>
+                <br>
+                <center> <img src="images/E-Commerce-Wireframes.png" ></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>Donation Page - Simplified</h2> <br> <br> 
+                The fundraising needs of UCLA are diverse, therefore there are multiple layouts for a donation page. This mockup is for simplified donation page which allows a donor to make a gift as quickly and painlessly as possible. </p></center>
+                <br>
+                <br>
+                <center> <img src="images/E-Commerce-Wireframes 2.png" ></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>Checkout Experience</h2><br> 
+                <br> 
+            As part of the revamping of our E-Commerce ecosystem, a major priority is to modernize the checkout experience for making a donation. The design is meant to be on par with e-commerce sites such as Amazon, and incorporate modern payment methods.</p></center>
+                <br>
+                <br>
+                <center> <img src="images/E-Commerce-Wireframes - 3.png" ></center>
+                <br>
+                <br>
+                
+                
+                
+
+                
+    </div>
+</div>
+        
+
+<!-------------------Services-------------------------------------------------------------------->
+
+<!----------------------------------------portfolio----------------------------------------------->
+
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        
+            <div class="copyright"></div>
+        <p>Copyright © Eric. </i> </p>    </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

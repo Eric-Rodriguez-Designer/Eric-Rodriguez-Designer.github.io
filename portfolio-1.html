@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+<!-------------------about--------------------------->
+<div id="about">
+    <div class="container">
+        
+            <h1 class="sub-title">UCLA Digital Constitent Experience</h1>
+            <br>
+            <br>
+            <h2> Skills:</h2> <br>
+            <p>User Research, Web Design/ Development, Marketing, Presentations, Brand Managment.</p> <br>
+            <h2>Project:</h2> <br>
+            <p>Alongside the Technology Product Manager of UCLA ATS and members of the ATS Team, I was involved in creating a series of focus groups called the UCLA Digital Constituent Experience Discovery Series.
+                In this series, we met with different teams across the broad department of UCLA External Affairs to collaboratively discuss ways that we could create a more uniform and positive digital experience for the diverse group of UCLA constiuents.
+            <br> 
+        <br> 
+   </p>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>Wordpress Site Landing Page</h2></p></center>
+                <br>
+                <p> To supplement the discovery meeting, I designed and created a marketing site hosted through Wordpress. The purpose of the site was to provide an explanation to UCLA External Affairs of what the goal of our initiative was, and to provide a central reference for all the findings of our user research. </p>
+                <br>
+                <br>
+                <center> <img src="images/DCE.png" ></center>
+                <br>
+                <br>
+                <center><h2>Discovery Series Slides</h2></center>
+                <br>
+                <br>
+                <p> To facilitate discussion, the Technology Product Manager and I developed a presentation deck tailored to the unique needs of every individual team. The desck included an explanation of the goals of the Discovery Series and provided discussion prompts. The deck was created to conform to the strict UCLA Brand Guidlines. To simplify the process of developing web pages and marketing materials, we created a Figma Style Library the contained all UCLA brand elements, such as specific color codes, and typography.</p>
+                <br>
+                <br>
+                
+                <center> <img src="images/DCE-Slide.png" ></center> <br>
+                <center> <img src="images/DCE-Slide- 2.png" ></center> <br>
+                <center> <img src="images/UCLA - Colors .png" ></center> <br>
+                <center> <img src="images/UCLA - Typography.png" ></center>
+                <br>
+                <br>
+                <center><h2>Post Meeting Digest</h2></center>
+                <br>
+                <br>
+                <p> Once the meetings are complete, the Product team review the meeting notes and recording and compose a post meeting digest document that summarized all the feedback from the meetings. We then post these documents to the website. This way all the teams can review the actions points from the meeting, and also view the findings of meetings that happened with different teams.  </p>
+                <center> <img src="images/Meeting-Digests.png" ></center>
+
+                
+                
+
+                
+    </div>
+</div>
+        
+
+<!-------------------Services-------------------------------------------------------------------->
+
+<!----------------------------------------portfolio----------------------------------------------->
+
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        
+            <div class="copyright"></div>
+        <p>Copyright © Eric. </i> </p>    </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

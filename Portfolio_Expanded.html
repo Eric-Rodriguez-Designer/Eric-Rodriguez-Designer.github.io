@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+    <br>
+    <br>
+
+<!----------------------------------------portfolio----------------------------------------------->
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Portfolio-1_IMG.png">
+                <div class="layer">
+                    <h3>UCLA Digital Constituent Experience</h3>
+                    <p>The UCLA Digital Constitent Experience Discovery Series is a series of discovery meetings with various teams within UCLA External Affairs. The purpose of these meetings is to collaborate with diverse groups in order to find ways to improve the digital experience of UCLA Constituents. </p>
+                <a href="portfolio-1.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Portfolio-2_IMG.png">
+                <div class="layer">
+                    <h3>E-Commerce UCLA Sites</h3>
+                    <p> A major project to overhaul the E-Commerce ecosystem of UCLA Giving. Currently, UCLA E-Commerce sites consist of a combination of legacy platforms, and 3rd party platforms. The goal is to unify all these platforms into a single, modern, mobile friendly giving experience. This application will be built in house with UCLA designer, and developers.</p>
+                <a href="portfolio-2.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Portfolio-3_IMG.png">
+                <div class="layer">
+                    <h3>Events RSVP Application</h3>
+                    <p>The Events RSVP Application project will replace the current legacy platform which is used to facilitate sign-ups by UCLA constituents to External Affairs sponsored Events. The new platform will be modern, mobile friendly, and support a self-service Content Management System. </p>
+                <a href="portfolio-3.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Portfolio-4_IMG.png">
+                <div class="layer">
+                    <h3>ATS Marketing Site </h3>
+                    <p>Marketing site for UCLA SAAS products. UCLA ATS has developed digital products for university advancement professionals. These products have garnered interest from other Universities that wish to licence them.</p>
+                <a href="portfolio-4.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Portfolio-5_IMG.png">
+                <div class="layer">
+                    <h3>Alumni Scholars Club Application </h3>
+                    <p>The Alumni Scholars Club is a program run by UCLA Alumni Affairs that supports UCLA scholarship recipients. My team designed and implemented a web application to assist them in managing their popular complex program. </p>
+                <a href="portfolio-5.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            
+           
+        </div>
+     <br>
+     <br>
+     <br>
+     <br>
+    </div>
+</div>
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:erodriguez7912@gmail.com">erodriguez7912@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i>(310) 418-0517</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Eric Rodriguez Resume 3 20 24.docx" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+            <div class="copyright"></div>
+        <center> <p>Copyright © Eric. </i> </p> </center>   </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

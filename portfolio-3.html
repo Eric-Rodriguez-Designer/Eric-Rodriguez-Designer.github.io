@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+<!-------------------about--------------------------->
+<div id="about">
+    <div class="container">
+        
+            <h1 class="sub-title">Events RSVP Application</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2> Skills:</h2> <br>
+            <p>Wire-framing, Creating High Fidelity Mock-ups, Prototyping, Product Design, User Research, Figma, User Journey Maps, Site-Mapping</p> <br>
+            <h2>Project:</h2> <br>
+            <p>In addition to gift sites, another major application offered by ATS are Event RSVP sites. These sites help connect UCLA constituents with UCLA Events put on by the External Affairs or Alumni Affairs departments. These events are a major source of engagement and donations from constituents. <br>
+                <br> 
+                The current platform is an outdated legacy platform. In my role as E-Commerce Product designer, I am responsible, for the research and design of the product. 
+    </p>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>Customer Journey Map</h2></p></center>
+                <br>
+                <br>
+                <p>To facilitate discussion and buy-in from our client teams, I create a customer journey map that details the top level steps a customer takes in the product being desinged. This is the first step in setting the scope for the product with the client.  </p>
+                <br>
+                <br>
+                <center> <img src="images/Customer Journey Map.png" ></center>
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center><p> <h2>User Registration Flow</h2></p></center>
+                <br>
+                <br>
+                <p>When setting the scope for the projects, I will also create various user and admin flow charts to help developers, customers and leadership understand the various components that will be needed on the site.</p>
+                <br>
+                <br>
+                <center> <img src="images/User_Registration_Flows.png" ></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>High Fidelity Comps</h2></p></center>
+                <br>
+                <br>
+                <p>Once the elements of a particular module of the product are approved by the Technology Product Manager, I create a high fidelity annoted wireframe. This may be shared with the client for approval. The mock-up also serves as a reference to our developers when building the product.</p>
+                <br>
+                <br>
+                <center> <img src="images/Event RSVP Page - Personlized Link.png" ></center>
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center> <img src="images/Ticket Selection Page - Personlized Link.png" ></center>
+                <br>
+                <br>
+                
+                
+                
+
+                
+    </div>
+</div>
+        
+
+<!-------------------Services-------------------------------------------------------------------->
+
+<!----------------------------------------portfolio----------------------------------------------->
+
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        
+            <div class="copyright"></div>
+        <p>Copyright © Eric. </i> </p>    </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

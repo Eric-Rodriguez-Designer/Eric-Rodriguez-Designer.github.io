@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+<!-------------------about--------------------------->
+<div id="about">
+    <div class="container">
+        
+            <h1 class="sub-title">UCLA ATS Marketing Site</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2> Skills:</h2> <br>
+            <p>Marketing, Web Design, Web Development. </p> <br>
+            <h2>Project:</h2> <br>
+            <p>UCLA ATS has created some products to serve the needs of University Advancement Professionals. These products, such as Gift Agreement Builder, and Gift Hub have garnered interest from other Universities. In repsonse, my team was tasked with desiging and implementing a simple marketing site for these softwares to promote these products as a software as a service available from UCLA ATS.  <br>
+                <br> 
+                The current platform is an outdated legacy platform. In my role as E-Commerce Product designer, I am responsible, for the research and design of the product. 
+    </p>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>ATS Marketing Site</h2></p></center>
+                <br>
+                <br>
+                <center> <p>The ATS Marketing site contains a list of the product that are complete and ready to be licensed.  </p> </center>
+                <br>
+                <br>
+                <center> <img src="images/ATS_Marketing Page.png" ></center>
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center><p> <h2>Gift Agreeent Builder Page</h2></p></center>
+                <br>
+                <br>
+                <p>This is an example of a detailed product page, in this case the page for UCLA's Gift Agreement Builder, a product that digitally automates the process of creating a gift agreement document for a donor to complete when making a donation to UCLA. </p>
+                <br>
+                <br>
+                <center> <img src="images/GAB_Marketing Page.png" ></center>
+            
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center> <img src="images/GAB_Marketing Page_1.png" ></center>
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center> <img src="images/GAB_Marketing Page_2.png" ></center>
+                <br>
+                <br>
+                
+                
+                
+
+                
+    </div>
+</div>
+        
+
+<!-------------------Services-------------------------------------------------------------------->
+
+<!----------------------------------------portfolio----------------------------------------------->
+
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        
+            <div class="copyright"></div>
+        <p>Copyright © Eric. </i> </p>    </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

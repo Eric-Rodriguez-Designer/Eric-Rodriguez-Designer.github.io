@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eric Rodriguez Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Eric.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+        </div>
+    </div>
+<!-------------------about--------------------------->
+<div id="about">
+    <div class="container">
+        
+            <h1 class="sub-title">UCLA Alumni Scholars Club Web Application</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2> Skills:</h2> <br>
+            <p>Web Design, Mobile Design, Prototyping, Wireframing, User Research </p> <br>
+            <h2>Project:</h2> <br>
+            <p>
+                This project was to create a modern web application to support the Alumni Affairs Alumni Scholars Club (ASC). This club supports UCLA Scholarship recipients with test banks, note sharing services, volunteer opportunities. Alumni Affairs came to ATS to assist with creating a modern web application to manage the logistics of this successful program. My team was responsible for the design of the application, while the building of the application was done with a third party vendor as well as UCLA develepors. 
+    </p>
+                <br>
+                <br>
+                <br>
+                <center><p> <h2>Alumni Scholars Club High Fidelity Mock - Ups</h2></p></center>
+                <br>
+                <br>
+                <center> <p> To faciliate the coding of the application, we created high fidelity annoted mock ups for each page of the application. The mock-ups were divided into user facing comps, and admin facing comps. Below are a few examples of the user facing comps.  </p> </center>
+                <br>
+                <br>
+                <center> <img src="images/Signed-In - Service Hours (Landing Page) - No Service Hours Submitted.png" ></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <center> <img src="images/Public_auctions.png" ></center>
+            
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <center> <h2> Admin Module Mock-ups </h2> </center> 
+                <br> 
+                <br>
+                <center> <img src="images/Admin - Bulk Program Participation Management.png" ></center>
+                
+                <center> <h2> Sign - In Page </h2> </center>
+                <br>
+                <br>
+                <center> <img src="images/ASC - Sign In Page.png" ></center>
+                <br>
+                <br>
+                <center> <h2> Mobile Mock-Ups  </h2> </center>
+                <br>
+                <br>
+                <center><p>In our user research, one thing that became clear was that the primary way that students accessed the application was through their phones. To make sure that the application worked well in the mobile format, I created mobile mock-ups for all of the pages.</p></center><p></p>
+                <br> 
+                <br> 
+            
+                <center> <img src="images/Page Content.png" ></center>
+                <br>
+                <br>
+                <center> <img src="images/Page Content 2.png" ></center>
+                <br>
+                <br>
+                <center> <h2> Components </h2> </center>
+                <br>
+                <br>
+                <center><p>Throughout the design process, there were a lot of changes and feedback. Following design best practices, we used Figma components for as many of the recurring web elements as possible. This way, if there was a change to a banner for instance, we were able to instantly update all instances of the component. </p></center><p></p>
+                <br> 
+                <br> 
+                <center> <img src="images/Components.png" ></center>
+                <br>
+                <br>
+                <center> <img src="images/Componenets 2.png" ></center>
+                <br>
+                <br>
+                
+                
+                
+
+                
+    </div>
+</div>
+        
+
+<!-------------------Services-------------------------------------------------------------------->
+
+<!----------------------------------------portfolio----------------------------------------------->
+
+
+<!---------------------contact-------------------------->
+
+<div id="contact">
+    <div class="container">
+        
+            <div class="container">
+        <center> <p>Eric Rodriguez 2024. </i> </p> </center>   </div> 
+
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+ </body>
+ </html>

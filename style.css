@@ -254,6 +254,33 @@ nav ul li a:hover::after{
     background: #2774AE;
 }
 
+.case-study {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.case-study h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-study h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #00457c;
+}
+
+.case-study p, .case-study li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.case-study ul {
+  padding-left: 1.2rem;
+}
+
 /*------------------contact--------------------*/
 .contact-left{
     flex-basis: 35%;

@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Eric Rodriguez Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
- </head>
- <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Eric.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Product Design — Eric Rodriguez Portfolio</title>
+  <meta name="description" content="Early wireframes and product design for UCLA's unified Magento e-commerce experience, combining multiple giving platforms into one modern storefront.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="E-Commerce Product Design — Eric Rodriguez Portfolio">
+  <meta property="og:description" content="Wireframing and UX design for UCLA's unified e-commerce and giving platform.">
+  <meta property="og:image"       content="images/Portfolio-2_IMG.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Porfolio-css.css">
+  <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous" defer></script>
+</head>
+<body class="case-study-page">
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#hero" class="nav__logo">
+          <img src="images/Eric.png" alt="Eric Rodriguez" width="110" height="37" loading="eager">
+        </a>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li class="nav__close-item">
+            <button class="nav__close" aria-label="Close navigation">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li><a href="index.html#hero"     class="nav__link">Home</a></li>
+          <li><a href="index.html#projects" class="nav__link">Work</a></li>
+          <li><a href="index.html#about"    class="nav__link">About</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-study-header">
+      <div class="container">
+        <span class="section-eyebrow">Case Study</span>
+        <h1>E-Commerce Website — Early Wireframes</h1>
+        <div class="case-study-meta">
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Role</span>
+            <span class="case-study-meta__value">Product Designer</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Skills</span>
+            <span class="case-study-meta__value">Wireframing · Prototyping · User Research</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Tools</span>
+            <span class="case-study-meta__value">Figma · Auto Layout</span>
+          </div>
         </div>
+      </div>
     </div>
-<!-------------------about--------------------------->
-<div id="about">
-    <div class="container">
-        
-            <h1 class="sub-title">E-Commerce Website - Early Wireframes</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2> Skills:</h2> <br>
-            <p>Wire-framing, Prototyping, Product Design, User Research, Figma, Auto Layout</p> <br>
-            <h2>Project:</h2> <br>
-            <p>A major design project that is currently in the design phase is the overhaul of UCLA's E-Commerce websites. The new E-Commerce experience will be powered by Magento, and will combine various current platforms into a uniform, modern E-Commerce experience.</p>
-                <br>
-                <br>
-                <br>
-                <center><h2> Donation Page</h2> <br> 
-                <br> 
-            This is an early wireframe that displays the components of a giving page. The design combines two current UCLA sites. "Giveto UCLA" sites currently contain the call to action for giving to a specific cause, the actual donations are made in a separate page on giving.ucla.edu. The design above combines both into one central giving experience. Working on early wireframes has helped me to master auto layout in Figma.</p></center>
-                <br>
-                <br>
-                <center> <img src="images/E-Commerce-Wireframes.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                <br>
-                <br>
-                <center><p> <h2>Donation Page - Simplified</h2> <br> <br> 
-                The fundraising needs of UCLA are diverse, therefore there are multiple layouts for a donation page. This mockup is for simplified donation page which allows a donor to make a gift as quickly and painlessly as possible. </p></center>
-                <br>
-                <br>
-                <center> <img src="images/E-Commerce-Wireframes 2.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                <br>
-                <br>
-                <center><p> <h2>Checkout Experience</h2><br> 
-                <br> 
-            As part of the revamping of our E-Commerce ecosystem, a major priority is to modernize the checkout experience for making a donation. The design is meant to be on par with e-commerce sites such as Amazon, and incorporate modern payment methods.</p></center>
-                <br>
-                <br>
-                <center> <img src="images/E-Commerce-Wireframes - 3.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                
-                
 
-                
+    <div class="case-study-body">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
+        </a>
+
+        <h2>Project Overview</h2>
+        <p>A major design project in the UCLA Advancement Technology Solutions portfolio is the overhaul of UCLA's E-Commerce websites. The new experience will be powered by Magento and will combine multiple existing platforms into a single, uniform, modern e-commerce experience for donors and participants.</p>
+
+        <h2>Donation Page</h2>
+        <p>This early wireframe shows the components of a unified giving page. The design combines two current UCLA sites — "GivetoUCLA" sites with the call to action, and the actual donation flow on giving.ucla.edu — into one central giving experience. Mastering Figma's Auto Layout was critical to building these at scale.</p>
+
+        <img src="images/E-Commerce-Wireframes.png"
+             alt="UCLA E-Commerce unified donation page wireframe"
+             width="1200" height="750"
+             loading="lazy">
+
+        <h2>Donation Page — Simplified</h2>
+        <p>UCLA's fundraising needs are diverse, so multiple layout variants are required. This mockup is for a simplified donation page that allows donors to make a gift as quickly and painlessly as possible, reducing friction in the giving flow.</p>
+
+        <img src="images/E-Commerce-Wireframes 2.png"
+             alt="UCLA E-Commerce simplified donation page wireframe"
+             width="1200" height="750"
+             loading="lazy">
+
+        <h2>Checkout Experience</h2>
+        <p>A top priority for the e-commerce revamp is modernizing the checkout experience. The design brings UCLA's donation checkout on par with leading e-commerce sites and incorporates modern payment methods to remove barriers to giving.</p>
+
+        <img src="images/E-Commerce-Wireframes - 3.png"
+             alt="UCLA E-Commerce modern checkout experience wireframe"
+             width="1200" height="750"
+             loading="lazy">
+
+      </div>
     </div>
-</div>
-        
+  </main>
 
-<!-------------------Services-------------------------------------------------------------------->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">Eric Rodriguez</p>
+        <p class="site-footer__tagline">UX / Product Designer — Los Angeles, CA</p>
+      </div>
+      <nav class="site-footer__links" aria-label="Social and contact links">
+        <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+        </a>
+        <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
+        </a>
+      </nav>
+      <p class="site-footer__copy">&copy; 2026 Eric Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
 
-<!----------------------------------------portfolio----------------------------------------------->
-
-
-<!---------------------contact-------------------------->
-
-<div id="contact">
-    <div class="container">
-        
-            <div class="container">
-        <center> <p>Eric Rodriguez 2025. </i> </p> </center>   </div> 
-
-</div>
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
- </body>
- </html>
-
+  <script src="script.js" defer></script>
+</body>
+</html>

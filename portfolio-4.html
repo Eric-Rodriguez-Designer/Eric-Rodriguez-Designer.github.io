@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Eric Rodriguez Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
- </head>
- <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Eric.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS Marketing Site — Eric Rodriguez Portfolio</title>
+  <meta name="description" content="How Eric Rodriguez designed and built a marketing site for UCLA Advancement Technology Solutions to promote licensable software products to other universities.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="ATS Marketing Site — Eric Rodriguez Portfolio">
+  <meta property="og:description" content="Marketing site design for UCLA ATS software products available for licensing to other universities.">
+  <meta property="og:image"       content="images/Portfolio-4_IMG.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Porfolio-css.css">
+  <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous" defer></script>
+</head>
+<body class="case-study-page">
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#hero" class="nav__logo">
+          <img src="images/Eric.png" alt="Eric Rodriguez" width="110" height="37" loading="eager">
+        </a>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li class="nav__close-item">
+            <button class="nav__close" aria-label="Close navigation">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li><a href="index.html#hero"     class="nav__link">Home</a></li>
+          <li><a href="index.html#projects" class="nav__link">Work</a></li>
+          <li><a href="index.html#about"    class="nav__link">About</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-study-header">
+      <div class="container">
+        <span class="section-eyebrow">Case Study</span>
+        <h1>UCLA ATS Marketing Site</h1>
+        <div class="case-study-meta">
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Role</span>
+            <span class="case-study-meta__value">Web Designer &amp; Developer</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Skills</span>
+            <span class="case-study-meta__value">Marketing · Web Design · Web Development</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Tools</span>
+            <span class="case-study-meta__value">Figma · WordPress · HTML/CSS</span>
+          </div>
         </div>
+      </div>
     </div>
-<!-------------------about--------------------------->
-<div id="about">
-    <div class="container">
-        
-            <h1 class="sub-title">UCLA ATS Marketing Site</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2> Skills:</h2> <br>
-            <p>Marketing, Web Design, Web Development. </p> <br>
-            <h2>Project:</h2> <br>
-            <p>UCLA ATS has created some products to serve the needs of University Advancement Professionals. These products, such as Gift Agreement Builder, and Gift Hub have garnered interest from other Universities. In repsonse, my team was tasked with desiging and implementing a simple marketing site for these softwares to promote these products as a software as a service available from UCLA ATS.  <br>
-               
-    </p>
-                <br>
-                <br>
-                <br>
-                <center><p> <h2>ATS Marketing Site</h2></p></center>
-                <br>
-                <br>
-                <center> <p>The ATS Marketing site contains a list of the product that are complete and ready to be licensed.  </p> </center>
-                <br>
-                <br>
-                <center> <img src="images/ATS_Marketing Page.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                <br>
-                <br>
-                <center><p> <h2>Gift Agreeent Builder Page</h2></p></center>
-                <br>
-                <br>
-                <p>This is an example of a detailed product page, in this case the page for UCLA's Gift Agreement Builder, a product that digitally automates the process of creating a gift agreement document for a donor to complete when making a donation to UCLA. </p>
-                <br>
-                <br>
-                <center> <img src="images/GAB_Marketing Page.png" style="max-width: 100%; height: auto;" ></center>
-            
-                <br>
-                <br>
-                
-                <br>
-                <br>
-                <center> <img src="images/GAB_Marketing Page_1.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                <br>
-                <br>
-                <center> <img src="images/GAB_Marketing Page_2.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                
-                
 
-                
+    <div class="case-study-body">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
+        </a>
+
+        <h2>Project Overview</h2>
+        <p>UCLA ATS built several products — including Gift Agreement Builder and Gift Hub — that generated interest from other universities looking for similar solutions. My team was tasked with designing and implementing a marketing site to promote these products as licensable software available from UCLA ATS to the broader higher-education market.</p>
+
+        <h2>ATS Marketing Site</h2>
+        <p>The site presents a catalog of completed products ready for licensing, communicating capabilities and value to prospective university partners.</p>
+
+        <img src="images/ATS_Marketing Page.png"
+             alt="UCLA ATS marketing site homepage showing licensable product catalog"
+             width="1200" height="700"
+             loading="lazy">
+
+        <h2>Gift Agreement Builder Product Page</h2>
+        <p>Each product has a dedicated detail page. The Gift Agreement Builder page showcases the product that digitally automates the process of creating gift agreement documents for UCLA donors — eliminating a previously manual, paper-based workflow.</p>
+
+        <img src="images/GAB_Marketing Page.png"
+             alt="Gift Agreement Builder marketing page, hero section"
+             width="1200" height="700"
+             loading="lazy">
+
+        <img src="images/GAB_Marketing Page_1.png"
+             alt="Gift Agreement Builder marketing page, features section"
+             width="1200" height="700"
+             loading="lazy">
+
+        <img src="images/GAB_Marketing Page_2.png"
+             alt="Gift Agreement Builder marketing page, call to action section"
+             width="1200" height="700"
+             loading="lazy">
+
+      </div>
     </div>
-</div>
-        
+  </main>
 
-<!-------------------Services-------------------------------------------------------------------->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">Eric Rodriguez</p>
+        <p class="site-footer__tagline">UX / Product Designer — Los Angeles, CA</p>
+      </div>
+      <nav class="site-footer__links" aria-label="Social and contact links">
+        <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+        </a>
+        <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
+        </a>
+      </nav>
+      <p class="site-footer__copy">&copy; 2026 Eric Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
 
-<!----------------------------------------portfolio----------------------------------------------->
-
-
-<!---------------------contact-------------------------->
-
-<div id="contact">
-    <div class="container">
-        
-            <div class="container">
-        <center> <p>Eric Rodriguez 2025. </i> </p> </center>   </div> 
-
-</div>
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
- </body>
- </html>
-
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,145 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Eric Rodriguez Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
- </head>
- <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Eric.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            
-        </div>
-    </div>
-<!-------------------about--------------------------->
-<div id="about">
-   <div class="container">
-        
-            <section class="case-study bg-white py-16 px-6 md:px-16">
-    <h2>UCLA RSVP Platform Redesign</h2>
-    <p><strong>Role:</strong> Product Designer</p>
-    <p><strong>Tools:</strong> Figma, Adobe Illustrator, HTML/CSS</p>
-<br><br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events RSVP Platform Redesign — Eric Rodriguez Portfolio</title>
+  <meta name="description" content="How Eric Rodriguez redesigned UCLA's legacy RSVP system into a mobile-first, accessible event registration platform — reducing abandonment by 47%.">
 
-    <h3>🧠 The Challenge</h3>
-    <p>
-      The legacy RSVP system used by UCLA’s External Affairs team was outdated,
-      mobile-unfriendly, and confusing for users. The team needed a responsive,
-      streamlined platform that could accommodate various event types and user roles.
-    </p>
-<br><br>
-    <h3>🔍 My Approach</h3>
-    <ul>
-      <li>Conducted stakeholder interviews and user surveys</li>
-      <li>Created personas and journey maps based on pain points</li>
-      <li>Designed wireframes and iterated with stakeholder feedback</li>
-      <li>Prototyped and built high-fidelity responsive designs in Figma</li>
-      <li>Delivered assets for development with mobile-first principles</li>
-    </ul>
-<br><br>
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Events RSVP Platform Redesign — Eric Rodriguez Portfolio">
+  <meta property="og:description" content="Mobile-first redesign of UCLA's event registration platform, reducing abandonment by 47%.">
+  <meta property="og:image"       content="images/Portfolio-3_IMG.png">
 
-    <h3>🚧 Challenges</h3>
-    <p>
-      Scope creep mid-project required reprioritizing. I worked closely with developers
-      to phase features and keep MVP deliverables on track.
-    </p>
-<br><br>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 
-    <h3>✅ Outcome</h3>
-    <p>
-      The new RSVP system reduced registration abandonment by 47% and increased mobile
-      usage by 60%. Stakeholders reported improved usability and event efficiency.
-    </p>
-  </div>
-</section>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Porfolio-css.css">
+  <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous" defer></script>
+</head>
+<body class="case-study-page">
 
-  
-
-                
-                
-                <br>
-                <br>
-                <center> <img src="images/Event RSVP Page - Personlized Link.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                <br>
-                <br>
-                <center> <img src="images/Ticket Selection Page - Personlized Link.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-
-    
-                <br>
-                <center> <img src="images/Frame 89.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                
-                
-
-                
-    </div>
-</div>
-        
-
-<!-------------------Services-------------------------------------------------------------------->
-
-<!----------------------------------------portfolio----------------------------------------------->
-
-
-<!---------------------contact-------------------------->
-
-<div id="contact">
+  <header class="site-header" id="site-header">
     <div class="container">
-        
-            <div class="container">
-        <center> <p>Eric Rodriguez 2025. </i> </p> </center>   </div> 
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#hero" class="nav__logo">
+          <img src="images/Eric.png" alt="Eric Rodriguez" width="110" height="37" loading="eager">
+        </a>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li class="nav__close-item">
+            <button class="nav__close" aria-label="Close navigation">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li><a href="index.html#hero"     class="nav__link">Home</a></li>
+          <li><a href="index.html#projects" class="nav__link">Work</a></li>
+          <li><a href="index.html#about"    class="nav__link">About</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-</div>
+  <main>
+    <div class="case-study-header">
+      <div class="container">
+        <span class="section-eyebrow">Case Study</span>
+        <h1>UCLA RSVP Platform Redesign</h1>
+        <div class="case-study-meta">
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Role</span>
+            <span class="case-study-meta__value">Product Designer</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Skills</span>
+            <span class="case-study-meta__value">UX Research · Wireframing · Mobile-First Design</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Tools</span>
+            <span class="case-study-meta__value">Figma · Adobe Illustrator · HTML/CSS</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Outcome</span>
+            <span class="case-study-meta__value">47% reduction in registration abandonment</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<script>
+    <div class="case-study-body">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
+        </a>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+        <h2>The Challenge</h2>
+        <p>The legacy RSVP system used by UCLA's External Affairs team was outdated, mobile-unfriendly, and confusing for users. The team needed a responsive, streamlined platform that could accommodate various event types and user roles — all without disrupting active event cycles.</p>
 
-    function opentab(tabname){
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
+        <h2>My Approach</h2>
+        <ul class="cs-list">
+          <li>Conducted stakeholder interviews and user surveys to identify pain points</li>
+          <li>Created personas and journey maps based on research findings</li>
+          <li>Designed wireframes and iterated with stakeholder feedback</li>
+          <li>Prototyped and built high-fidelity responsive designs in Figma</li>
+          <li>Delivered assets for development with mobile-first principles</li>
+        </ul>
 
-</script>
+        <h2>Challenges</h2>
+        <p>Scope creep mid-project required reprioritizing features. I worked closely with developers to phase deliverables and keep the MVP on track without compromising the core user experience.</p>
 
-<script>
-    var sidemenu = document.getElementById("sidemenu");
+        <h2>Key Screens</h2>
 
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
+        <img src="images/Event RSVP Page - Personlized Link.png"
+             alt="UCLA RSVP platform — personalized event landing page design"
+             width="1200" height="750"
+             loading="lazy">
 
- </body>
- </html>
+        <img src="images/Ticket Selection Page - Personlized Link.png"
+             alt="UCLA RSVP platform — ticket selection page with personalized link"
+             width="1200" height="750"
+             loading="lazy">
 
+        <img src="images/Frame 89.png"
+             alt="UCLA RSVP platform — event registration confirmation flow"
+             width="1200" height="750"
+             loading="lazy">
+
+        <h2>Outcome</h2>
+        <p>The redesigned RSVP system reduced registration abandonment by 47% and increased mobile usage by 60%. Stakeholders reported measurably improved usability and event coordination efficiency.</p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">Eric Rodriguez</p>
+        <p class="site-footer__tagline">UX / Product Designer — Los Angeles, CA</p>
+      </div>
+      <nav class="site-footer__links" aria-label="Social and contact links">
+        <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+        </a>
+        <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
+        </a>
+      </nav>
+      <p class="site-footer__copy">&copy; 2026 Eric Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

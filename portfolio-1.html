@@ -1,132 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Eric Rodriguez Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous"></script>
- </head>
- <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Eric.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="Portfolio_Expanded.html">Portfolio</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Digital Constituent Experience — Eric Rodriguez Portfolio</title>
+  <meta name="description" content="How Eric Rodriguez led focus groups and designed a marketing site to unify UCLA's digital experience strategy across External Affairs.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="UCLA Digital Constituent Experience — Eric Rodriguez Portfolio">
+  <meta property="og:description" content="Focus groups and marketing site design to unify UCLA's digital experience strategy.">
+  <meta property="og:image"       content="images/Portfolio-1_IMG.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Porfolio-css.css">
+  <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous" defer></script>
+</head>
+<body class="case-study-page">
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#hero" class="nav__logo">
+          <img src="images/Eric.png" alt="Eric Rodriguez" width="110" height="37" loading="eager">
+        </a>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li class="nav__close-item">
+            <button class="nav__close" aria-label="Close navigation">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li><a href="index.html#hero"     class="nav__link">Home</a></li>
+          <li><a href="index.html#projects" class="nav__link">Work</a></li>
+          <li><a href="index.html#about"    class="nav__link">About</a></li>
+          <li><a href="index.html#contact"  class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-study-header">
+      <div class="container">
+        <span class="section-eyebrow">Case Study</span>
+        <h1>UCLA Digital Constituent Experience</h1>
+        <div class="case-study-meta">
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Role</span>
+            <span class="case-study-meta__value">UX Designer &amp; Product Manager</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Skills</span>
+            <span class="case-study-meta__value">User Research · Web Design · Brand Management</span>
+          </div>
+          <div class="case-study-meta__item">
+            <span class="case-study-meta__label">Tools</span>
+            <span class="case-study-meta__value">Figma · WordPress · Presentations</span>
+          </div>
         </div>
+      </div>
     </div>
-<!-------------------about--------------------------->
-<div id="about">
-    <div class="container">
-        
-            <h1 class="sub-title">UCLA Digital Constituent Experience</h1>
-            <br>
-            <br>
-            <h2> Skills:</h2> <br>
-            <p>User Research, Web Design/ Development, Marketing, Presentations, Brand Managment.</p> <br>
-            <h2>Project:</h2> <br>
-            <p>Alongside the Technology Product Manager of UCLA ATS and members of the ATS Team, I was involved in creating a series of focus groups called the UCLA Digital Constituent Experience Discovery Series.
-                In this series, we met with different teams across the broad department of UCLA External Affairs to collaboratively discuss ways that we could create a more uniform and positive digital experience for the diverse group of UCLA constiuents.
-            <br> 
-        <br> 
-   </p>
-                <br>
-                <br>
-                <br>
-                <center><p> <h2>Wordpress Site Landing Page</h2></p></center>
-                <br>
-                <p> To supplement the discovery meeting, I designed and created a marketing site hosted through Wordpress. The purpose of the site was to provide an explanation to UCLA External Affairs of what the goal of our initiative was, and to provide a central reference for all the findings of our user research. </p>
-                <br>
-                <br>
-                <center> <img src="images/DCE.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                <center><h2>Discovery Series Slides</h2></center>
-                <br>
-                <br>
-                <p> To facilitate discussion, the Technology Product Manager and I developed a presentation deck tailored to the unique needs of every individual team. The desck included an explanation of the goals of the Discovery Series and provided discussion prompts. The deck was created to conform to the strict UCLA Brand Guidlines. To simplify the process of developing web pages and marketing materials, we created a Figma Style Library the contained all UCLA brand elements, such as specific color codes, and typography.</p>
-                <br>
-                <br>
-                
-                <center> <img src="images/DCE-Slide.png" style="max-width: 100%; height: auto;" ></center> <br>
-     <br>
-                <center> <img src="images/DCE-Slide- 2.png" style="max-width: 100%; height: auto;" ></center> <br>
-     <br>
-                <center> <img src="images/Group 9.png" style="max-width: 100%; height: auto;" ></center> <br>
-     <br>
-     <br>
-     <br>
-                <center> <img src="images/Group 8.png" style="max-width: 100%; height: auto;" ></center>
-                <br>
-                <br>
-                <center><h2>Post Meeting Digest</h2></center>
-                <br>
-                <br>
-                <p> Once the meetings are complete, the Product team review the meeting notes and recording and compose a post meeting digest document that summarized all the feedback from the meetings. We then post these documents to the website. This way all the teams can review the actions points from the meeting, and also view the findings of meetings that happened with different teams.  </p>
-                <center> <img src="images/Meeting-Digests.png" ></center>
 
-                
-                
+    <div class="case-study-body">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
+        </a>
 
-                
+        <h2>Project Overview</h2>
+        <p>Alongside the Technology Product Manager of UCLA ATS and members of the ATS Team, I led a series of focus groups called the UCLA Digital Constituent Experience Discovery Series. In this series, we met with different teams across UCLA External Affairs to collaboratively discuss ways to create a more uniform and positive digital experience for UCLA's diverse constituents.</p>
+
+        <h2>WordPress Site Landing Page</h2>
+        <p>To supplement the discovery meetings, I designed and built a marketing site hosted through WordPress. The site explained the initiative to UCLA External Affairs and provided a central reference for all our user research findings.</p>
+
+        <img src="images/DCE.png"
+             alt="UCLA Digital Constituent Experience WordPress landing page"
+             width="1200" height="700"
+             loading="lazy">
+
+        <h2>Discovery Series Presentation Deck</h2>
+        <p>To facilitate discussion, the Technology Product Manager and I developed a presentation deck tailored to the unique needs of every individual team. The deck explained the Discovery Series goals and provided discussion prompts — all designed to conform to UCLA Brand Guidelines. To simplify future web and marketing work, we created a Figma Style Library containing all UCLA brand elements including color codes and typography.</p>
+
+        <img src="images/DCE-Slide.png"
+             alt="UCLA Digital Constituent Experience discovery series slide deck, slide 1"
+             width="1200" height="675"
+             loading="lazy">
+
+        <img src="images/DCE-Slide- 2.png"
+             alt="UCLA Digital Constituent Experience discovery series slide deck, slide 2"
+             width="1200" height="675"
+             loading="lazy">
+
+        <img src="images/Group 9.png"
+             alt="UCLA Digital Constituent Experience research findings group"
+             width="1200" height="675"
+             loading="lazy">
+
+        <img src="images/Group 8.png"
+             alt="UCLA Digital Constituent Experience additional research group"
+             width="1200" height="675"
+             loading="lazy">
+
+        <h2>Post-Meeting Digest</h2>
+        <p>After each meeting, the Product team reviewed notes and recordings to compose a post-meeting digest summarizing all feedback. We published these documents to the website so all teams could review action points and view findings from other teams' sessions.</p>
+
+        <img src="images/Meeting-Digests.png"
+             alt="Post-meeting digest documents published on the discovery series website"
+             width="1200" height="700"
+             loading="lazy">
+
+      </div>
     </div>
-</div>
-        
+  </main>
 
-<!-------------------Services-------------------------------------------------------------------->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">Eric Rodriguez</p>
+        <p class="site-footer__tagline">UX / Product Designer — Los Angeles, CA</p>
+      </div>
+      <nav class="site-footer__links" aria-label="Social and contact links">
+        <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+        </a>
+        <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
+        </a>
+      </nav>
+      <p class="site-footer__copy">&copy; 2026 Eric Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
 
-<!----------------------------------------portfolio----------------------------------------------->
-
-
-<!---------------------contact-------------------------->
-
-<div id="contact">
-    <div class="container">
-        
-            <div class="container">
-        <center> <p>Eric Rodriguez 2025. </i> </p> </center>   </div> 
-
-</div>
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
- </body>
- </html>
-
+  <script src="script.js" defer></script>
+</body>
+</html>

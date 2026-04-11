@@ -19,6 +19,7 @@ function initMobileMenu() {
     menu.classList.add('nav__menu--open');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    // Move focus into menu
     const firstLink = menu.querySelector('a');
     if (firstLink) firstLink.focus();
   }
@@ -31,23 +32,31 @@ function initMobileMenu() {
   }
 
   toggle.addEventListener('click', () => {
-    menu.classList.contains('nav__menu--open') ? closeMenu() : openMenu();
+    const isOpen = menu.classList.contains('nav__menu--open');
+    isOpen ? closeMenu() : openMenu();
   });
 
   if (close) close.addEventListener('click', closeMenu);
 
+  // Close on Escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menu.classList.contains('nav__menu--open')) closeMenu();
+    if (e.key === 'Escape' && menu.classList.contains('nav__menu--open')) {
+      closeMenu();
+    }
   });
 
+  // Close on outside click
   document.addEventListener('click', (e) => {
     if (
       menu.classList.contains('nav__menu--open') &&
       !menu.contains(e.target) &&
       !toggle.contains(e.target)
-    ) closeMenu();
+    ) {
+      closeMenu();
+    }
   });
 
+  // Close menu and follow nav links
   menu.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', () => {
       if (menu.classList.contains('nav__menu--open')) closeMenu();
@@ -67,11 +76,11 @@ function initNavScroll() {
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  onScroll(); // run once on load
 }
 
 /* ---------------------------------------------------------
-   Scroll Spy
+   Scroll Spy — active nav link
    --------------------------------------------------------- */
 function initScrollSpy() {
   const sections = ['#hero', '#projects', '#about', '#contact']
@@ -89,23 +98,28 @@ function initScrollSpy() {
         const id = entry.target.getAttribute('id');
         navLinks.forEach((link) => {
           const href = link.getAttribute('href') || '';
-          link.classList.toggle('nav__link--active', href === `#${id}` || href.endsWith(`#${id}`));
+          // Match both "#id" (index.html) and "index.html#id" (portfolio pages)
+          const matches = href === `#${id}` || href.endsWith(`#${id}`);
+          link.classList.toggle('nav__link--active', matches);
         });
       });
     },
     { threshold: 0, rootMargin: '-40% 0px -55% 0px' }
   );
 
-  sections.forEach((s) => { if (s) observer.observe(s); });
+  sections.forEach((s) => {
+    if (s) observer.observe(s);
+  });
 }
 
 /* ---------------------------------------------------------
-   Scroll Fade
+   Scroll Fade — Intersection Observer
    --------------------------------------------------------- */
 function initScrollFade() {
   const elements = document.querySelectorAll('.fade-in');
   if (!elements.length) return;
 
+  // Respect reduced-motion: show immediately
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     elements.forEach((el) => el.classList.add('is-visible'));
     return;
@@ -131,19 +145,28 @@ function initScrollFade() {
    --------------------------------------------------------- */
 function initParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
   let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        document.documentElement.style.setProperty('--scroll-y', window.scrollY);
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          document.documentElement.style.setProperty(
+            '--scroll-y',
+            window.scrollY
+          );
+          ticking = false;
+        });
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 }
 
 /* ---------------------------------------------------------

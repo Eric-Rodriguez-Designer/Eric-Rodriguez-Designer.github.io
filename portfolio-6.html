@@ -11,6 +11,8 @@
   <meta property="og:description" content="Mobile-first UX design for a self-service auction platform adopted across multiple UCLA departments.">
   <meta property="og:image"       content="images/Portfolio-6.png.png">
 
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
@@ -65,7 +67,7 @@
           </div>
           <div class="case-study-meta__item">
             <span class="case-study-meta__label">Outcome</span>
-            <span class="case-study-meta__value">40%+ reduction in event setup time</span>
+            <span class="case-study-meta__value">40%+ reduction in event setup time · Multi-dept adoption</span>
           </div>
         </div>
       </div>
@@ -78,29 +80,29 @@
         </a>
 
         <h2>Project Overview</h2>
-        <p>UCLA frequently hosts fundraising auctions with items donated by alumni, departments, and community supporters. Existing third-party auction platforms were incompatible with UCLA's internal systems and data security requirements. My team designed and developed a custom in-house auction platform that empowers UCLA event managers to create, manage, and run auctions independently — without requiring technical assistance.</p>
-
-        <h2>The Challenge</h2>
-        <ul class="cs-list">
-          <li>Third-party platforms could not securely integrate with UCLA's internal systems</li>
-          <li>Event managers needed a simple, intuitive way to create and run auctions without IT help</li>
-          <li>The platform needed to be fully mobile-friendly for both staff and bidders</li>
-          <li>Multiple auction formats and item types required a flexible design system</li>
-        </ul>
+        <p>UCLA frequently hosts fundraising auctions with items donated by alumni, departments, and community supporters. The existing solution — a patchwork of third-party auction platforms — couldn't securely integrate with UCLA's internal systems, required IT involvement for every event, and offered no mobile experience for bidders.</p>
+        <p>My team designed and developed a custom in-house auction platform that empowers UCLA event managers to create, configure, and run auctions entirely on their own — without IT support — while providing a fully mobile-responsive bidding experience for attendees.</p>
 
         <h2>Design Process</h2>
 
         <h3 class="cs-step">1. Discovery &amp; Research</h3>
-        <p>Conducted stakeholder interviews with UCLA advancement and events staff. Analyzed pain points from previous auction experiences and mapped technical constraints with UCLA IT to define the design boundaries.</p>
+        <p>Conducted stakeholder interviews with UCLA advancement and events staff. Analyzed pain points from previous auction experiences and mapped technical constraints with UCLA IT to define the design boundaries. A critical insight from research: admin users frequently worked on-site during live events using phones or tablets — making mobile-first a non-negotiable requirement for both admin and bidder interfaces.</p>
 
         <h3 class="cs-step">2. User Flows &amp; Wireframes</h3>
-        <p>Created simplified flows for key tasks: event creation, item listing, bidding, and winner notification. Mobile-first wireframes were prioritized since admin users frequently worked on-site with phones or tablets — a key insight from research.</p>
+        <p>Created simplified flows for key tasks: event creation, item listing, live bidding, and winner notification. Built parallel flows for the admin experience (event setup, item management, live monitoring) and the public bidder experience (browse, bid, confirm) to ensure neither was treated as secondary.</p>
 
         <h3 class="cs-step">3. UI Design &amp; Prototyping</h3>
-        <p>Designed a clean, intuitive interface on-brand with UCLA's digital identity. Accessibility and clarity were prioritized for a broad public audience. Prototypes covered event creation, item uploads, and live bidding management.</p>
+        <p>Designed a clean, intuitive interface on-brand with UCLA's digital identity. Accessibility and clarity were prioritized for a broad public audience — many bidders would be first-time users at a live event, with no time to learn a new system. Prototypes covered event creation, item uploads, and live bidding management.</p>
 
         <h3 class="cs-step">4. Testing &amp; Iteration</h3>
-        <p>Ran usability tests with event managers using Figma prototypes. Iterated based on feedback to improve image upload flows and item status tracking — two areas where initial designs created confusion.</p>
+        <p>Ran usability tests with event managers using Figma prototypes. Iterated based on feedback to improve image upload flows and item status tracking — two areas where initial designs created confusion. Also simplified the winner notification flow based on feedback from a post-event debrief with the first team to use the platform.</p>
+
+        <h2>Research Findings</h2>
+        <ul class="cs-research-findings">
+          <li>Event managers reported spending 3–5 hours configuring third-party platforms before each auction — with most of that time spent on workarounds for features the platform didn't natively support</li>
+          <li>During live auctions, staff needed to update item statuses in real time from the event floor — a task that was nearly impossible on the legacy system's non-responsive admin interface</li>
+          <li>Post-event winner notifications were being sent manually via email after each auction, with an average lag of 2+ days between auction close and notification delivery</li>
+        </ul>
 
         <h2>Key Screens</h2>
 
@@ -124,8 +126,32 @@
              width="1200" height="750"
              loading="lazy">
 
+        <h2>Before &amp; After</h2>
+        <div class="cs-before-after">
+          <div class="cs-before-after__col cs-before-after__col--before">
+            <span class="cs-before-after__label">Before</span>
+            <ul class="cs-before-after__list">
+              <li>3rd-party tools incompatible with UCLA systems</li>
+              <li>IT required for every event setup</li>
+              <li>No mobile bidding experience for attendees</li>
+              <li>Winner notifications sent manually 2+ days post-event</li>
+              <li>3–5 hours of pre-event admin configuration</li>
+            </ul>
+          </div>
+          <div class="cs-before-after__col cs-before-after__col--after">
+            <span class="cs-before-after__label">After</span>
+            <ul class="cs-before-after__list">
+              <li>In-house platform with full UCLA system integration</li>
+              <li>Self-service setup — zero IT involvement required</li>
+              <li>Mobile-first bidding experience for all attendees</li>
+              <li>Automated winner notifications triggered at auction close</li>
+              <li>Event setup reduced from hours to under 30 minutes</li>
+            </ul>
+          </div>
+        </div>
+
         <h2>Outcome</h2>
-        <p>The platform was adopted by multiple UCLA departments and now supports several annual auctions. Event setup time was reduced by over 40%, and staff report significantly increased confidence in running auctions independently. The fully mobile-responsive design serves both admin and bidder audiences seamlessly.</p>
+        <p>The platform was adopted by multiple UCLA departments and now supports several annual auctions. Event setup time was reduced by over 40%, and staff report significantly increased confidence in running auctions independently. The fully mobile-responsive design serves both admin and bidder audiences seamlessly — and automated winner notifications eliminated the 2-day post-event lag entirely.</p>
 
       </div>
     </div>

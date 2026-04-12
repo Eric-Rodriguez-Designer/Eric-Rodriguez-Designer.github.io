@@ -91,9 +91,105 @@
   font-family: var(--font-heading);
 }
 
+/* Research findings — highlighted insight bullets */
+.cs-research-findings {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-6);
+}
+
+.cs-research-findings li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  border-left: 3px solid var(--color-accent);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+}
+
+.cs-research-findings li::before {
+  content: '→';
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Before / After comparison grid */
+.cs-before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-block: var(--space-8);
+}
+
+.cs-before-after__col {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+}
+
+.cs-before-after__label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-subheading);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  margin-bottom: var(--space-4);
+}
+
+.cs-before-after__col--before .cs-before-after__label {
+  color: #9CA3AF;
+}
+
+.cs-before-after__col--after .cs-before-after__label {
+  color: var(--color-accent);
+}
+
+.cs-before-after__list {
+  list-style: none;
+  padding: 0;
+}
+
+.cs-before-after__list li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.55;
+}
+
+.cs-before-after__list li:last-child {
+  border-bottom: none;
+}
+
+.cs-before-after__col--before .cs-before-after__list li::before {
+  content: '✕ ';
+  color: #9CA3AF;
+  font-size: 0.65rem;
+  vertical-align: 1px;
+}
+
+.cs-before-after__col--after .cs-before-after__list li::before {
+  content: '✓ ';
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  vertical-align: 1px;
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .case-study-body .container {
     padding-inline: var(--container-padding);
+  }
+
+  .cs-before-after {
+    grid-template-columns: 1fr;
   }
 }

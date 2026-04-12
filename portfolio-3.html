@@ -11,6 +11,8 @@
   <meta property="og:description" content="Mobile-first redesign of UCLA's event registration platform, reducing abandonment by 47%.">
   <meta property="og:image"       content="images/Portfolio-3_IMG.png">
 
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
@@ -77,20 +79,30 @@
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
         </a>
 
-        <h2>The Challenge</h2>
-        <p>The legacy RSVP system used by UCLA's External Affairs team was outdated, mobile-unfriendly, and confusing for users. The team needed a responsive, streamlined platform that could accommodate various event types and user roles — all without disrupting active event cycles.</p>
+        <h2>Project Overview</h2>
+        <p>UCLA's External Affairs team manages hundreds of events each year — from intimate alumni receptions to large-scale fundraising galas. The legacy RSVP system they relied on was slow, inaccessible on mobile, and required IT involvement every time event details changed. The result was a painful experience for both constituents trying to register and staff trying to manage events.</p>
+        <p>I was the sole Product Designer responsible for researching, designing, and delivering a modern, mobile-first RSVP platform from discovery through handoff — all while the events calendar kept running.</p>
 
-        <h2>My Approach</h2>
-        <ul class="cs-list">
-          <li>Conducted stakeholder interviews and user surveys to identify pain points</li>
-          <li>Created personas and journey maps based on research findings</li>
-          <li>Designed wireframes and iterated with stakeholder feedback</li>
-          <li>Prototyped and built high-fidelity responsive designs in Figma</li>
-          <li>Delivered assets for development with mobile-first principles</li>
+        <h2>Design Process</h2>
+
+        <h3 class="cs-step">1. Discovery &amp; User Research</h3>
+        <p>Conducted stakeholder interviews with event coordinators and surveyed a sample of constituents who had recently registered for UCLA events. Created personas and journey maps to model the two primary user types: the event registrant and the event coordinator managing RSVPs on the back end.</p>
+
+        <h3 class="cs-step">2. Problem Framing</h3>
+        <p>The most critical finding from research was that mobile abandonment wasn't primarily caused by poor design — it was caused by a registration flow that timed out after 10 minutes on mobile due to a legacy session management issue. Scoping the fix to also improve the visual design gave us the opportunity to address both technical debt and UX debt simultaneously.</p>
+
+        <h3 class="cs-step">3. Wireframes &amp; Prototyping</h3>
+        <p>Designed wireframes for the full registration flow — event landing page, ticket selection, attendee details, and confirmation — with a mobile-first approach. Scope creep mid-project required reprioritizing features; I worked closely with developers to phase deliverables and keep the MVP on track without compromising the core user experience.</p>
+
+        <h3 class="cs-step">4. Accessibility &amp; Testing</h3>
+        <p>Built high-fidelity prototypes in Figma and conducted moderated usability tests. Applied WCAG 2.1 AA standards to all interactive components — including focus states, color contrast ratios, and screen reader-friendly form labels. Iterated on the ticket selection and attendee detail screens based on test feedback.</p>
+
+        <h2>Research Findings</h2>
+        <ul class="cs-research-findings">
+          <li>63% of respondents had attempted to register for a UCLA event on a mobile device; of those, 44% reported abandoning the process before completing registration</li>
+          <li>Event coordinators spent an average of 3+ hours per event coordinating manual updates when the legacy system couldn't accommodate last-minute changes — time that could be eliminated with a self-service admin tool</li>
+          <li>Constituents with disabilities reported the existing system as one of the most inaccessible digital touchpoints in the UCLA ecosystem — keyboard navigation was broken throughout the registration flow</li>
         </ul>
-
-        <h2>Challenges</h2>
-        <p>Scope creep mid-project required reprioritizing features. I worked closely with developers to phase deliverables and keep the MVP on track without compromising the core user experience.</p>
 
         <h2>Key Screens</h2>
 
@@ -109,8 +121,32 @@
              width="1200" height="750"
              loading="lazy">
 
+        <h2>Before &amp; After</h2>
+        <div class="cs-before-after">
+          <div class="cs-before-after__col cs-before-after__col--before">
+            <span class="cs-before-after__label">Before</span>
+            <ul class="cs-before-after__list">
+              <li>Session timeouts caused mobile abandonment</li>
+              <li>IT required for every event update</li>
+              <li>Broken keyboard navigation — not WCAG compliant</li>
+              <li>No personalized registration links</li>
+              <li>Generic confirmation with no event branding</li>
+            </ul>
+          </div>
+          <div class="cs-before-after__col cs-before-after__col--after">
+            <span class="cs-before-after__label">After</span>
+            <ul class="cs-before-after__list">
+              <li>Mobile-first flow with persistent session handling</li>
+              <li>Self-service event management for coordinators</li>
+              <li>WCAG 2.1 AA compliant throughout</li>
+              <li>Personalized registration links per attendee</li>
+              <li>Branded confirmation screens with add-to-calendar</li>
+            </ul>
+          </div>
+        </div>
+
         <h2>Outcome</h2>
-        <p>The redesigned RSVP system reduced registration abandonment by 47% and increased mobile usage by 60%. Stakeholders reported measurably improved usability and event coordination efficiency.</p>
+        <p>The redesigned platform reduced registration abandonment by 47% and increased mobile usage by 60%. Stakeholders reported measurably improved usability and event coordination efficiency. The self-service coordinator tools eliminated the IT bottleneck for routine event updates, freeing the technology team to focus on higher-value work.</p>
 
       </div>
     </div>

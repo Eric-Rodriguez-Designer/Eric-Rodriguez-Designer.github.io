@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image — Eric Rodriguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #0D1117;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Teal glow blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      background: #00B4D8;
+      filter: blur(100px);
+      opacity: 0.1;
+    }
+    .blob--1 { width: 600px; height: 600px; top: -200px; right: -100px; }
+    .blob--2 { width: 300px; height: 300px; bottom: -100px; left: -50px; opacity: 0.06; }
+
+    /* Left accent bar */
+    .accent-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: #00B4D8;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 100px;
+    }
+
+    .eyebrow {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #00B4D8;
+      margin-bottom: 24px;
+    }
+
+    .name {
+      font-size: 84px;
+      font-weight: 700;
+      color: #F4F4F5;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #A0A0B0;
+      letter-spacing: -0.01em;
+      margin-bottom: 40px;
+    }
+
+    .tagline {
+      font-size: 20px;
+      color: #5C5C6E;
+      line-height: 1.5;
+      max-width: 640px;
+    }
+
+    .url {
+      position: absolute;
+      bottom: 48px;
+      left: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #00B4D8;
+      letter-spacing: 0.02em;
+    }
+
+    /* ER monogram — top right */
+    .monogram {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+      width: 80px;
+      height: 80px;
+      background: rgba(0, 180, 216, 0.1);
+      border: 2px solid rgba(0, 180, 216, 0.3);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #00B4D8;
+      letter-spacing: -1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob--1"></div>
+  <div class="blob blob--2"></div>
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="name">Eric Rodriguez</h1>
+    <p class="title">UX / Product Designer</p>
+    <p class="tagline">Bridging research, design, and development to create digital experiences people actually love.</p>
+  </div>
+
+  <p class="url">ericrodriguezdesigns.com</p>
+  <div class="monogram">ER</div>
+</body>
+</html>

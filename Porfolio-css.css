@@ -183,11 +183,11 @@
   vertical-align: 1px;
 }
 
-/* Screenshot gallery — 3-up grid with captions */
+/* Screenshot gallery — 2-up grid with captions */
 .cs-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
   margin-block: var(--space-8);
 }
 
@@ -200,6 +200,7 @@
 /* Override the default case-study img margin inside gallery items */
 .cs-gallery__item img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
@@ -232,5 +233,10 @@
 
   .cs-before-after {
     grid-template-columns: 1fr;
+  }
+
+  .cs-gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
   }
 }

@@ -183,11 +183,11 @@
   vertical-align: 1px;
 }
 
-/* Screenshot gallery — 2-up grid with captions */
+/* Screenshot gallery — single column, full-width images */
 .cs-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   margin-block: var(--space-8);
 }
 
@@ -200,10 +200,9 @@
 /* Override the default case-study img margin inside gallery items */
 .cs-gallery__item img {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   margin-block: 0;
   transition: transform var(--transition-base),
               box-shadow var(--transition-base);
@@ -211,7 +210,7 @@
 
 .cs-gallery__item img:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
 
 .cs-gallery__caption {
@@ -235,8 +234,5 @@
     grid-template-columns: 1fr;
   }
 
-  .cs-gallery {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
+  /* .cs-gallery is already single-column flex — no override needed */
 }

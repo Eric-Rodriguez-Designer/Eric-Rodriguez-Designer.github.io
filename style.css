@@ -487,9 +487,26 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-6);
 }
 
-/* Asymmetric editorial layout */
+/* Asymmetric editorial layout (work/index.html full gallery) */
 .project-card:nth-child(odd)  { grid-column: span 7; }
 .project-card:nth-child(even) { grid-column: span 5; }
+
+/* Homepage featured 3-card grid */
+.projects__grid--featured {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+
+.projects__grid--featured .project-card:nth-child(odd),
+.projects__grid--featured .project-card:nth-child(even) {
+  grid-column: span 1;
+}
+
+/* "View all" row below featured grid */
+.projects__cta {
+  text-align: center;
+  margin-top: var(--space-12);
+}
 
 .project-card {
   position: relative;
@@ -520,26 +537,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card__img-wrap {
   position: relative;
-  aspect-ratio: 16 / 9;
+  height: 280px;
   overflow: hidden;
-}
-
-/* Browser chrome frame */
-.project-card__img-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 28px;
-  background-color: #1a1f28;
-  background-image:
-    radial-gradient(circle at 12px 14px, #FF605C 5px, transparent 5.5px),
-    radial-gradient(circle at 26px 14px, #FFBD44 5px, transparent 5.5px),
-    radial-gradient(circle at 40px 14px, #00CA4E 5px, transparent 5.5px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  z-index: 1;
-  pointer-events: none;
 }
 
 .project-card__img-wrap img {
@@ -1176,6 +1175,16 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) {
   .project-card:nth-child(odd)  { grid-column: span 6; }
   .project-card:nth-child(even) { grid-column: span 6; }
+
+  /* Featured grid: 2 columns on tablet */
+  .projects__grid--featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__grid--featured .project-card:nth-child(odd),
+  .projects__grid--featured .project-card:nth-child(even) {
+    grid-column: span 1;
+  }
 }
 
 /* ---------------------------------------------------------
@@ -1253,13 +1262,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Projects — single column, clean card layout */
-  .projects__grid {
+  .projects__grid,
+  .projects__grid--featured {
     grid-template-columns: 1fr;
     gap: var(--space-6);
   }
 
   .project-card:nth-child(odd),
-  .project-card:nth-child(even) {
+  .project-card:nth-child(even),
+  .projects__grid--featured .project-card:nth-child(odd),
+  .projects__grid--featured .project-card:nth-child(even) {
     grid-column: span 1;
   }
 

@@ -491,9 +491,9 @@ h1, h2, h3, h4, h5, h6 {
 .project-card:nth-child(odd)  { grid-column: span 7; }
 .project-card:nth-child(even) { grid-column: span 5; }
 
-/* Homepage featured 3-card grid */
+/* Homepage featured 2-card grid */
 .projects__grid--featured {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
 }
 
@@ -537,7 +537,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card__img-wrap {
   position: relative;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -1176,15 +1176,7 @@ h1, h2, h3, h4, h5, h6 {
   .project-card:nth-child(odd)  { grid-column: span 6; }
   .project-card:nth-child(even) { grid-column: span 6; }
 
-  /* Featured grid: 2 columns on tablet */
-  .projects__grid--featured {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .projects__grid--featured .project-card:nth-child(odd),
-  .projects__grid--featured .project-card:nth-child(even) {
-    grid-column: span 1;
-  }
+  /* Featured grid already 2-col at desktop — no override needed here */
 }
 
 /* ---------------------------------------------------------

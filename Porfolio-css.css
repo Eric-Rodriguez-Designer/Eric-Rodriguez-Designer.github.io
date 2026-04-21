@@ -183,6 +183,47 @@
   vertical-align: 1px;
 }
 
+/* Screenshot gallery — 3-up grid with captions */
+.cs-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-block: var(--space-8);
+}
+
+.cs-gallery__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Override the default case-study img margin inside gallery items */
+.cs-gallery__item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  margin-block: 0;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.cs-gallery__item img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cs-gallery__caption {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .case-study-body .container {

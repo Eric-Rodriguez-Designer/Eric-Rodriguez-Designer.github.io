@@ -246,16 +246,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 100;
   height: var(--nav-height);
-  background-color: var(--color-bg);
+  background-color: rgba(13, 17, 23, 0.97);
+  border-bottom: 2px solid var(--color-accent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: box-shadow var(--transition-base),
               background-color var(--transition-base);
 }
 
 .site-header--scrolled {
-  box-shadow: var(--shadow-nav);
-  background-color: rgba(244, 244, 245, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(13, 17, 23, 0.88);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
 }
 
 .nav {
@@ -263,19 +264,58 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-8);
 }
 
+/* Logo — ER monogram + name */
 .nav__logo {
   display: flex;
   align-items: center;
+  gap: var(--space-2);
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .nav__logo img {
-  width: 110px;
-  height: auto;
+  display: none; /* replaced by monogram + text */
 }
 
+.nav__monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--color-accent);
+  color: var(--color-hero-bg);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  border-radius: 5px;
+  flex-shrink: 0;
+  user-select: none;
+  transition: background-color var(--transition-fast);
+}
+
+.nav__logo:hover .nav__monogram {
+  background-color: var(--color-accent-hover);
+}
+
+.nav__logo-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  transition: color var(--transition-fast);
+}
+
+.nav__logo:hover .nav__logo-name {
+  color: var(--color-accent);
+}
+
+/* Nav links */
 .nav__menu {
   display: flex;
   align-items: center;
@@ -286,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-subheading);
-  color: var(--color-text-primary);
+  color: #fff;
   text-decoration: none;
   padding-bottom: var(--space-1);
   transition: color var(--transition-fast);
@@ -319,6 +359,35 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
+/* Hire Me CTA pill */
+.nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1.1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-subheading);
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 36px;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.nav__cta:hover {
+  background-color: var(--color-accent);
+  color: var(--color-hero-bg);
+}
+
+.nav__cta:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-full);
+}
+
 /* Mobile toggle — hidden on desktop */
 .nav__toggle {
   display: none;
@@ -326,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: var(--color-text-primary);
+  color: var(--color-accent);
   font-size: 1.25rem;
   border-radius: var(--radius-sm);
   transition: color var(--transition-fast), background-color var(--transition-fast);
@@ -1186,6 +1255,11 @@ h1, h2, h3, h4, h5, h6 {
   /* Nav */
   .nav__toggle {
     display: inline-flex;
+  }
+
+  /* Hide pill CTA on mobile — Contact link is already in the nav menu */
+  .nav__cta {
+    display: none;
   }
 
   .nav__menu {

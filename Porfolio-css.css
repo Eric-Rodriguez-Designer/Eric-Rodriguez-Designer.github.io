@@ -236,6 +236,52 @@
   height: auto;
 }
 
+/* POC status badge — shown in case study header */
+.cs-poc-badge {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  background: rgba(230, 168, 23, 0.1);
+  color: #b8860b;
+  border: 1px solid rgba(230, 168, 23, 0.35);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-subheading);
+  letter-spacing: 0.03em;
+  margin-top: var(--space-3);
+}
+
+/* POC notice box — shown in case study body */
+.cs-poc-notice {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding: var(--space-4) var(--space-5);
+  background: rgba(230, 168, 23, 0.06);
+  border: 1px solid rgba(230, 168, 23, 0.28);
+  border-left: 4px solid #e6a817;
+  border-radius: var(--radius-sm);
+  margin-block: var(--space-8);
+}
+
+.cs-poc-notice__icon {
+  color: #e6a817;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.cs-poc-notice__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.cs-poc-notice__text strong {
+  color: var(--color-text-primary);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .case-study-body .container {

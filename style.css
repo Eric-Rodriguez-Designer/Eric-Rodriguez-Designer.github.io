@@ -544,8 +544,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero__scroll-hint {
   position: absolute;
   bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;

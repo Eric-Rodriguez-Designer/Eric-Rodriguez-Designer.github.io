@@ -224,6 +224,18 @@
   border: 1px solid var(--color-border);
 }
 
+/* 2-column pair for mobile screenshots within a gallery */
+.cs-gallery__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs-gallery__pair .cs-gallery__item img {
+  width: 100%;
+  height: auto;
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .case-study-body .container {

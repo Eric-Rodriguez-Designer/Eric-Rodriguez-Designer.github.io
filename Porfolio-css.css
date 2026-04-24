@@ -236,6 +236,19 @@
   height: auto;
 }
 
+/* Reflective quote / retrospective callout */
+.cs-reflection {
+  border-left: 4px solid var(--color-accent);
+  margin-block: var(--space-8);
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: var(--font-size-base);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
 /* POC status badge — shown in case study header */
 .cs-poc-badge {
   display: inline-block;

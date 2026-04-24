@@ -33,6 +33,7 @@
   </script>
 </head>
 <body class="case-study-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container">
@@ -52,7 +53,6 @@
           <li><a href="/about/"   class="nav__link">About</a></li>
           <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
-        <a href="/contact/" class="nav__cta">Hire Me</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
@@ -60,7 +60,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="case-study-header">
       <div class="container">
         <span class="section-eyebrow">Case Study</span>
@@ -111,7 +111,7 @@
         <p>Built individual product detail pages for each licensable offering. Each page followed a consistent structure: product overview, key capabilities, screenshots, and a clear inquiry call-to-action. Launched the site with three initial product pages and a contact form connected to the ATS team.</p>
 
         <h2>Research Findings</h2>
-        <ul class="cs-research-findings">
+        <ul class="cs-research-findings" role="list">
           <li>Inbound licensing inquiries from peer institutions were being lost because there was no consistent landing page to direct interested parties to — ATS was fielding one-off emails with no structured intake process</li>
           <li>Competing university technology marketing sites led with features rather than outcomes; we differentiated by leading with the problem each product solves and quantifying the impact</li>
           <li>The primary decision-maker audience (VP-level advancement technology leaders) responded more positively to peer-institution credibility signals than to feature lists</li>
@@ -147,7 +147,7 @@
         <div class="cs-before-after">
           <div class="cs-before-after__col cs-before-after__col--before">
             <span class="cs-before-after__label">Before</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>No public marketing presence for ATS products</li>
               <li>Licensing inquiries handled ad hoc via email</li>
               <li>No structured way to showcase product capabilities</li>
@@ -156,7 +156,7 @@
           </div>
           <div class="cs-before-after__col cs-before-after__col--after">
             <span class="cs-before-after__label">After</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>Professional marketing site with 3 product pages</li>
               <li>Structured inquiry form with ATS team routing</li>
               <li>Screenshots, feature breakdowns, and value props</li>
@@ -181,10 +181,10 @@
       <nav class="site-footer__links" aria-label="Social and contact links">
         <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
           <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
         </a>

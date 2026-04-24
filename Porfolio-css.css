@@ -50,7 +50,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-accent);
+  /* #00B4D8 on #F4F4F5 = 2.2:1 ✗ — use accent-dark (#005E80) = 5.97:1 ✓ */
+  color: var(--color-accent-dark);
   font-weight: var(--font-weight-subheading);
   font-size: var(--font-size-sm);
   margin-bottom: var(--space-12);
@@ -85,7 +86,8 @@
 .cs-step {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-subheading);
-  color: var(--color-accent);
+  /* Dark teal on light case study body bg (#F4F4F5) = 5.97:1 ✓ */
+  color: var(--color-accent-dark);
   margin-bottom: var(--space-2);
   margin-top: var(--space-6);
   font-family: var(--font-heading);
@@ -114,7 +116,8 @@
 
 .cs-research-findings li::before {
   content: '→';
-  color: var(--color-accent);
+  /* Dark teal on white surface = 6.5:1 ✓ */
+  color: var(--color-accent-dark);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 1px;
@@ -145,11 +148,13 @@
 }
 
 .cs-before-after__col--before .cs-before-after__label {
-  color: #9CA3AF;
+  /* #9CA3AF on white = 2.4:1 ✗ — use text-secondary (#5C5C6E) = 5.3:1 ✓ */
+  color: var(--color-text-secondary);
 }
 
 .cs-before-after__col--after .cs-before-after__label {
-  color: var(--color-accent);
+  /* #00B4D8 on white = 2.4:1 ✗ — use accent-dark (#005E80) = 6.5:1 ✓ */
+  color: var(--color-accent-dark);
 }
 
 .cs-before-after__list {
@@ -171,14 +176,16 @@
 
 .cs-before-after__col--before .cs-before-after__list li::before {
   content: '✕ ';
-  color: #9CA3AF;
+  /* #9CA3AF on white = 2.4:1 ✗ — use text-secondary = 5.3:1 ✓ */
+  color: var(--color-text-secondary);
   font-size: 0.65rem;
   vertical-align: 1px;
 }
 
 .cs-before-after__col--after .cs-before-after__list li::before {
   content: '✓ ';
-  color: var(--color-accent);
+  /* #00B4D8 on white = 2.4:1 ✗ — use accent-dark = 6.5:1 ✓ */
+  color: var(--color-accent-dark);
   font-size: 0.65rem;
   vertical-align: 1px;
 }
@@ -204,13 +211,15 @@
 .cs-before-after--visual .cs-before-after__col--before .cs-before-after__label {
   background: rgba(156, 163, 175, 0.12);
   border-bottom: 2px solid #9CA3AF;
-  color: #6B7280;
+  /* #6B7280 on near-white = 4.34:1 ✗ — use text-secondary (#5C5C6E) = 5.3:1 ✓ */
+  color: var(--color-text-secondary);
 }
 
 .cs-before-after--visual .cs-before-after__col--after .cs-before-after__label {
   background: rgba(0, 180, 216, 0.08);
   border-bottom: 2px solid var(--color-accent);
-  color: var(--color-accent);
+  /* #00B4D8 on near-white = 2.3:1 ✗ — use accent-dark (#005E80) = 5.9:1 ✓ */
+  color: var(--color-accent-dark);
 }
 
 .cs-before-after--visual img {

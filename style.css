@@ -22,6 +22,8 @@
   --color-accent-subtle:    rgba(0, 180, 216, 0.12);
   --color-border:           rgba(0, 0, 0, 0.08);
   --color-focus-ring:       #00B4D8;
+  /* Accessible dark teal — use for teal text/borders on light backgrounds (contrast ≥ 4.5:1 on white, #F4F4F5, and #EAEAEC) */
+  --color-accent-dark:      #005E80;
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -53,7 +55,10 @@
   --space-12: 3rem;
   --space-16: 4rem;
 
-  --space-section:       clamp(4rem, 10vw, 8rem);
+  /* 80px at desktop (≥833px), 48px at mobile — consistent across all major sections */
+  --space-section:       clamp(3rem, 6vw, 5rem);
+  /* 48px — subsection and secondary padding */
+  --space-section-sm:    3rem;
   --container-max:       1200px;
   --container-padding:   clamp(1.25rem, 5vw, 4rem);
   --nav-height:          64px;
@@ -61,7 +66,7 @@
   /* Borders & Radius */
   --radius-sm:   6px;
   --radius-card: 12px;
-  --radius-btn:  8px;
+  --radius-btn:  6px;
   --radius-full: 9999px;
 
   /* Shadows */
@@ -139,6 +144,49 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------------------------------------------------------
    3. Utilities
    --------------------------------------------------------- */
+
+/* Skip navigation — visually hidden until focused by keyboard */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-accent-dark);
+  color: #fff;
+  font-weight: var(--font-weight-subheading);
+  font-size: var(--font-size-sm);
+  border-radius: 0 0 var(--radius-btn) var(--radius-btn);
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Visually hidden utility — content available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Global focus-visible fallback — catches any interactive element not explicitly styled */
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .container {
   max-width: var(--container-max);
   margin-inline: auto;
@@ -151,8 +199,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-subheading);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-eyebrow);
+  /* Default: dark bg context — #00B4D8 on #0D1117 = 7.4:1 ✓ */
   color: var(--color-accent);
   margin-bottom: var(--space-3);
+}
+
+/* Light-bg sections: switch to accessible dark teal (#005E80) — 5.97:1 on #F4F4F5 ✓ */
+.projects .section-eyebrow,
+.about .section-eyebrow,
+.contact-section .section-eyebrow,
+.contact-page .section-eyebrow {
+  color: var(--color-accent-dark);
 }
 
 .section-title {
@@ -206,12 +263,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--outline {
   background-color: transparent;
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
+  /* Use accessible dark teal — #005E80 achieves 5.97:1 on light section bg (#F4F4F5) */
+  color: var(--color-accent-dark);
+  border: 2px solid var(--color-accent-dark);
 }
 
 .btn--outline:hover {
   background-color: var(--color-accent-subtle);
+  color: var(--color-accent-dark);
   transform: translateY(-2px);
 }
 
@@ -347,13 +406,20 @@ h1, h2, h3, h4, h5, h6 {
   transition: width var(--transition-base);
 }
 
-.nav__link:hover,
-.nav__link--active {
+/* Hover: white text — teal underline (::after) signals the hover state without overusing teal */
+.nav__link:hover {
+  color: var(--color-text-on-dark);
+}
+
+/* Active / current page: teal text + teal underline */
+.nav__link--active,
+.nav__link[aria-current="page"] {
   color: var(--color-accent);
 }
 
 .nav__link:hover::after,
-.nav__link--active::after {
+.nav__link--active::after,
+.nav__link[aria-current="page"]::after {
   width: 100%;
 }
 
@@ -716,7 +782,8 @@ h1, h2, h3, h4, h5, h6 {
 .project-card__stat {
   font-size: 0.7rem;
   font-weight: var(--font-weight-subheading);
-  color: var(--color-accent);
+  /* Dark teal on accent-subtle bg — #005E80 on rgba(0,180,216,0.12)/white = 5.9:1 ✓ */
+  color: var(--color-accent-dark);
   background: var(--color-accent-subtle);
   padding: 3px var(--space-3);
   border-radius: var(--radius-full);
@@ -838,8 +905,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Skills column --- */
+/* h3 on index.html (about is h2 section → h3 subsection); h2 on standalone about page (h1 page → h2 subsection) */
 .about__skills h3,
-.about__timeline h3 {
+.about__skills h2,
+.about__timeline h3,
+.about__timeline h2 {
   font-size: var(--font-size-lg);
   font-family: var(--font-heading);
   margin-bottom: var(--space-8);
@@ -850,7 +920,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-6);
 }
 
-.skill-group h4 {
+/* h4 on index.html (h2 section → h3 subhead → h4 group); h3 on standalone about page (h1 → h2 subhead → h3 group) */
+.skill-group h4,
+.skill-group h3 {
   font-family: var(--font-body);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-subheading);
@@ -869,7 +941,8 @@ h1, h2, h3, h4, h5, h6 {
 .skill-pills li {
   padding: var(--space-1) var(--space-3);
   background-color: var(--color-accent-subtle);
-  color: var(--color-accent);
+  /* Dark teal on accent-subtle/#EAEAEC bg = 5.5:1 ✓ */
+  color: var(--color-accent-dark);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
   font-weight: 500;
@@ -951,7 +1024,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .timeline__org {
   font-size: var(--font-size-sm);
-  color: var(--color-accent);
+  /* Dark teal on surface-alt #EAEAEC = 5.5:1 ✓ */
+  color: var(--color-accent-dark);
   font-weight: 500;
   margin-bottom: var(--space-2);
 }

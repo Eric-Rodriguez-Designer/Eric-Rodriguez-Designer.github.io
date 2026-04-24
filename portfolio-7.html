@@ -33,6 +33,7 @@
   </script>
 </head>
 <body class="case-study-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container">
@@ -52,7 +53,6 @@
           <li><a href="/about/"   class="nav__link">About</a></li>
           <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
-        <a href="/contact/" class="nav__cta">Hire Me</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
@@ -60,7 +60,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="case-study-header">
       <div class="container">
         <span class="section-eyebrow">Case Study</span>
@@ -93,7 +93,7 @@
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
         </a>
 
-        <div class="cs-poc-notice">
+        <div class="cs-poc-notice" role="note" aria-label="Project status notice">
           <i class="fa-solid fa-triangle-exclamation cs-poc-notice__icon" aria-hidden="true"></i>
           <p class="cs-poc-notice__text">
             <strong>Proof of Concept — Not Launched to Production</strong>
@@ -106,7 +106,7 @@
         <p>To explore what a better giving experience could look like, I conducted UX research with donors and advancement staff across UCLA's existing giving platforms, then used those insights to design and build a proof-of-concept unified Online Giving Portal. The POC was built full-stack — integrating Stripe for payment processing and using an AI-assisted development workflow — to validate the technical approach alongside the UX design. This is not a launched product; it is a working prototype intended to demonstrate feasibility and inform future investment decisions.</p>
 
         <h2>The Challenge</h2>
-        <ul class="cs-list">
+        <ul class="cs-list" role="list">
           <li>Donors encountered three different visual identities and checkout flows depending on the fund they wanted to support</li>
           <li>Gift officers had no unified view of donor activity across platforms, making stewardship difficult</li>
           <li>Mobile conversion rates lagged significantly behind desktop due to outdated form patterns</li>
@@ -132,7 +132,7 @@
         <p>Conducted moderated usability tests with eight donors recruited through UCLA Alumni Affairs. Key iterations included simplifying the fund search experience, reducing the number of steps in the recurring gift setup, and improving error state clarity on the payment form.</p>
 
         <h2>Research Findings</h2>
-        <ul class="cs-research-findings">
+        <ul class="cs-research-findings" role="list">
           <li>72% of test participants completed a gift on mobile during usability testing, but 4 of 8 initially abandoned the recurring gift flow due to unclear configuration language</li>
           <li>Gift officers cited "waiting for IT to build a campaign page" as their #1 pain point — average wait time was 3–4 weeks per request</li>
           <li>Donors expressed hesitation on the payment screen due to unfamiliar platform branding; aligning checkout with UCLA's primary brand identity measurably increased perceived trust in follow-up surveys</li>
@@ -182,7 +182,7 @@
         <div class="cs-before-after">
           <div class="cs-before-after__col cs-before-after__col--before">
             <span class="cs-before-after__label">Before</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>3 separate giving platforms with inconsistent UX</li>
               <li>No mobile-optimized checkout flow</li>
               <li>IT required for every campaign page launch</li>
@@ -192,7 +192,7 @@
           </div>
           <div class="cs-before-after__col cs-before-after__col--after">
             <span class="cs-before-after__label">After</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>Single unified portal with consistent UCLA branding</li>
               <li>Mobile-first checkout with Apple Pay &amp; Google Pay</li>
               <li>Self-service campaign builder for advancement staff</li>
@@ -219,10 +219,10 @@
       <nav class="site-footer__links" aria-label="Social and contact links">
         <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
           <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
         </a>

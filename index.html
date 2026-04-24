@@ -63,6 +63,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container">
@@ -77,12 +78,11 @@
               <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
           </li>
-          <li><a href="/"         class="nav__link nav__link--active">Home</a></li>
+          <li><a href="/" class="nav__link nav__link--active" aria-current="page">Home</a></li>
           <li><a href="/work/"    class="nav__link">Work</a></li>
           <li><a href="/about/"   class="nav__link">About</a></li>
           <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
-        <a href="/contact/" class="nav__cta">Hire Me</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
@@ -90,7 +90,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- HERO -->
     <section id="hero" class="hero" aria-label="Introduction">
@@ -309,7 +309,7 @@
 
             <div class="skill-group">
               <h4>Design</h4>
-              <ul class="skill-pills">
+              <ul class="skill-pills" role="list">
                 <li>UX Research</li>
                 <li>Product Design</li>
                 <li>UI Design</li>
@@ -321,7 +321,7 @@
 
             <div class="skill-group">
               <h4>Tools</h4>
-              <ul class="skill-pills">
+              <ul class="skill-pills" role="list">
                 <li>Figma</li>
                 <li>WordPress</li>
                 <li>HTML / CSS</li>
@@ -333,7 +333,7 @@
 
             <div class="skill-group">
               <h4>Methods</h4>
-              <ul class="skill-pills">
+              <ul class="skill-pills" role="list">
                 <li>Focus Groups</li>
                 <li>Journey Mapping</li>
                 <li>Competitive Analysis</li>
@@ -344,7 +344,7 @@
 
             <div class="skill-group">
               <h4>Languages</h4>
-              <ul class="skill-pills">
+              <ul class="skill-pills" role="list">
                 <li class="skill-pill--featured">English (Native)</li>
                 <li class="skill-pill--featured">Spanish (Fluent)</li>
               </ul>
@@ -352,7 +352,7 @@
 
             <div class="skill-group">
               <h4>Emerging Tools</h4>
-              <ul class="skill-pills">
+              <ul class="skill-pills" role="list">
                 <li>Claude Code / Anthropic Claude</li>
                 <li>GitHub Spec Kit</li>
                 <li>AI-Assisted Spec Writing</li>
@@ -369,7 +369,7 @@
 
           <div class="about__timeline fade-in">
             <h3>Experience</h3>
-            <ol class="timeline">
+            <ol class="timeline" role="list">
 
               <li class="timeline__item">
                 <div class="timeline__dot" aria-hidden="true"></div>
@@ -437,7 +437,7 @@
             <span class="contact-link__value">eric-rodriguez-968065122</span>
           </span>
           <i class="fa-solid fa-arrow-up-right-from-square contact-link__arrow" aria-hidden="true"></i>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
 
         <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io"
            target="_blank" rel="noopener noreferrer" class="contact-link fade-in">
@@ -447,7 +447,7 @@
             <span class="contact-link__value">Eric-Rodriguez-Designer</span>
           </span>
           <i class="fa-solid fa-arrow-up-right-from-square contact-link__arrow" aria-hidden="true"></i>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
 
         <a href="mailto:erodriguez7912@gmail.com" class="contact-link fade-in">
           <span class="contact-link__icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>

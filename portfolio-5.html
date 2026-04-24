@@ -33,6 +33,7 @@
   </script>
 </head>
 <body class="case-study-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container">
@@ -52,7 +53,6 @@
           <li><a href="/about/"   class="nav__link">About</a></li>
           <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
-        <a href="/contact/" class="nav__cta">Hire Me</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
@@ -60,7 +60,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="case-study-header">
       <div class="container">
         <span class="section-eyebrow">Case Study</span>
@@ -111,7 +111,7 @@
         <p>Conducted usability testing with multiple scholars and one admin, iterated on the volunteer hour logging flow and resource search based on feedback, and delivered annotated prototypes with component specifications to the development team.</p>
 
         <h2>Research Findings</h2>
-        <ul class="cs-research-findings">
+        <ul class="cs-research-findings" role="list">
           <li>Program managers spent an estimated 8–10 hours per week on manual volunteer hour verification — a process that required emailing individual scholars, cross-referencing their responses with sign-in sheets, and updating a master spreadsheet</li>
           <li>Scholars reported that the most common reason for not logging volunteer hours was "not knowing where or how" — a navigation problem, not a motivation problem</li>
           <li>Mobile was the dominant access point for scholar-facing content, but the existing platform was entirely desktop-only, with no responsive adaptation</li>
@@ -148,7 +148,7 @@
         <div class="cs-before-after">
           <div class="cs-before-after__col cs-before-after__col--before">
             <span class="cs-before-after__label">Before</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>Volunteer hours tracked via email and spreadsheets</li>
               <li>No mobile access — desktop-only platform</li>
               <li>Resources buried in poorly organized folders</li>
@@ -158,7 +158,7 @@
           </div>
           <div class="cs-before-after__col cs-before-after__col--after">
             <span class="cs-before-after__label">After</span>
-            <ul class="cs-before-after__list">
+            <ul class="cs-before-after__list" role="list">
               <li>In-app volunteer hour logging with admin approval queue</li>
               <li>Fully responsive — mobile-first design throughout</li>
               <li>Searchable resource library with category filters</li>
@@ -184,10 +184,10 @@
       <nav class="site-footer__links" aria-label="Social and contact links">
         <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
           <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
         </a>

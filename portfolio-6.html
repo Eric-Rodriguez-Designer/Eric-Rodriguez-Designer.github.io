@@ -33,6 +33,7 @@
   </script>
 </head>
 <body class="case-study-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <div class="container">
@@ -52,7 +53,6 @@
           <li><a href="/about/"   class="nav__link">About</a></li>
           <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
-        <a href="/contact/" class="nav__cta">Hire Me</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
@@ -60,7 +60,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="case-study-header">
       <div class="container">
         <span class="section-eyebrow">Case Study</span>
@@ -97,7 +97,7 @@
         <p>UCLA relied on expensive third-party auction platforms that didn't meet the unique needs of UCLA fundraising, failed to integrate with UCLA's CRM and donor data, and siphoned a percentage of proceeds away from the university. The solution was to design and build a fully custom auction platform from the ground up — one that could compete with commercial platforms while being purpose-built for UCLA's fundraising ecosystem.</p>
 
         <h2>The Problem</h2>
-        <ul class="cs-list">
+        <ul class="cs-list" role="list">
           <li>Third-party platforms were costly and took a cut of auction proceeds</li>
           <li>No integration with UCLA's private donor data and CRM systems</li>
           <li>Platforms didn't accommodate UCLA's unique fundraising requirements</li>
@@ -188,7 +188,7 @@
 
         <h2>What Shipped</h2>
         <p>A fully integrated, mobile-optimized live auction bidding platform launched at major UCLA fundraising events with hundreds of high-profile donors in attendance. The platform supports:</p>
-        <ul class="cs-list">
+        <ul class="cs-list" role="list">
           <li>Real-time competitive bidding with live updates</li>
           <li>Fixed-price item purchases alongside live auction items</li>
           <li>Outright donation capability integrated into the auction experience</li>
@@ -199,7 +199,7 @@
         </ul>
 
         <h2>Results</h2>
-        <ul class="cs-research-findings">
+        <ul class="cs-research-findings" role="list">
           <li>UCLA fundraising clients no longer pay third-party platform fees — 100% of auction proceeds go directly to UCLA</li>
           <li>Eliminated the risk and friction of transferring donor data between UCLA and external platforms</li>
           <li>Platform is fully integrated with UCLA's CRM and donor data from day one</li>
@@ -225,10 +225,10 @@
       <nav class="site-footer__links" aria-label="Social and contact links">
         <a href="https://www.linkedin.com/in/eric-rodriguez-968065122/" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="https://github.com/Eric-Rodriguez-Designer/Eric-Rodriguez-Designer.github.io" target="_blank" rel="noopener noreferrer" class="footer__link">
           <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
-        </a>
+        <span class="sr-only"> (opens in new tab)</span></a>
         <a href="mailto:erodriguez7912@gmail.com" class="footer__link">
           <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>erodriguez7912@gmail.com</span>
         </a>

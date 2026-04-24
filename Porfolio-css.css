@@ -183,6 +183,61 @@
   vertical-align: 1px;
 }
 
+/* Visual (image) before/after variant */
+.cs-before-after--visual {
+  gap: var(--space-6);
+}
+
+.cs-before-after--visual .cs-before-after__col {
+  padding: 0;
+  overflow: hidden;
+}
+
+.cs-before-after--visual .cs-before-after__label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: 0;
+}
+
+.cs-before-after--visual .cs-before-after__col--before .cs-before-after__label {
+  background: rgba(156, 163, 175, 0.12);
+  border-bottom: 2px solid #9CA3AF;
+  color: #6B7280;
+}
+
+.cs-before-after--visual .cs-before-after__col--after .cs-before-after__label {
+  background: rgba(0, 180, 216, 0.08);
+  border-bottom: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.cs-before-after--visual img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.cs-before-after--visual figcaption {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  padding: var(--space-3) var(--space-4);
+  line-height: 1.5;
+  background: var(--color-surface);
+}
+
+.cs-before-after__note {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-2);
+}
+
 /* Screenshot gallery — single column, full-width images */
 .cs-gallery {
   display: flex;

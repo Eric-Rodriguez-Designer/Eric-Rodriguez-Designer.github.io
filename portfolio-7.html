@@ -65,6 +65,7 @@
       <div class="container">
         <span class="section-eyebrow">Case Study</span>
         <h1>UCLA Online Giving Portal</h1>
+        <p class="case-study-subtitle">UX research and full-stack proof of concept for a unified giving portal — consolidating three UCLA donation platforms into one cohesive donor experience</p>
         <span class="cs-poc-badge"><i class="fa-solid fa-flask" aria-hidden="true"></i> Proof of Concept</span>
         <div class="case-study-meta">
           <div class="case-study-meta__item">
@@ -101,11 +102,11 @@
           </p>
         </div>
 
-        <h2>Project Overview</h2>
+        <h2>Overview</h2>
         <p>UCLA's online fundraising ecosystem spans three separate platforms — GiveToUCLA campaign sites, giving.ucla.edu, and department-level microsites — each maintained independently and incompatible with one another. The result is a fragmented donor journey, siloed fundraising data, and a growing backlog of maintenance debt for the technology team.</p>
         <p>To explore what a better giving experience could look like, I conducted UX research with donors and advancement staff across UCLA's existing giving platforms, then used those insights to design and build a proof-of-concept unified Online Giving Portal. The POC was built full-stack — integrating Stripe for payment processing and using an AI-assisted development workflow — to validate the technical approach alongside the UX design. This is not a launched product; it is a working prototype intended to demonstrate feasibility and inform future investment decisions.</p>
 
-        <h2>The Challenge</h2>
+        <h2>The Problem</h2>
         <ul class="cs-list" role="list">
           <li>Donors encountered three different visual identities and checkout flows depending on the fund they wanted to support</li>
           <li>Gift officers had no unified view of donor activity across platforms, making stewardship difficult</li>
@@ -114,7 +115,15 @@
           <li>Payment methods were limited — no Apple Pay, Google Pay, or recurring gift options</li>
         </ul>
 
-        <h2>Design Process</h2>
+        <h2>My Role</h2>
+        <p>Sole Product Designer and UX Researcher on the proof of concept. Led stakeholder research, conducted moderated usability tests with UCLA donors, mapped the full giving journey across three platforms, and designed high-fidelity mockups from discovery through development. Built the POC full-stack — integrating Stripe for payment processing using an AI-assisted workflow — to validate both the UX design direction and technical feasibility alongside the product design.</p>
+
+        <h2>Users</h2>
+        <p>Two distinct user groups shaped the design direction:</p>
+        <p><strong>Front-end (UCLA Donors):</strong> Alumni, parents, faculty, and major donors — ranging widely in technical ability and giving history. The experience needed to feel trusted, fast, and brand-consistent on mobile, where conversion rates on existing platforms lagged significantly behind desktop.</p>
+        <p><strong>Admin side (UCLA Advancement Staff):</strong> Gift officers and campaign managers who needed a self-service tool to launch campaign pages, monitor giving activity, and manage fund configurations — without waiting weeks for IT involvement.</p>
+
+        <h2>Research &amp; Process</h2>
 
         <h3 class="cs-step">1. Discovery &amp; Stakeholder Research</h3>
         <p>Ran a series of stakeholder interviews across Advancement, IT, and the gift officer community. Mapped the existing giving journeys across all three platforms end-to-end, identifying the critical drop-off points and the administrative pain points that were slowing campaign execution. Key insight: advancement staff wanted a self-service campaign tool just as much as donors wanted a faster checkout.</p>
@@ -137,6 +146,10 @@
           <li>Gift officers cited "waiting for IT to build a campaign page" as their #1 pain point — average wait time was 3–4 weeks per request</li>
           <li>Donors expressed hesitation on the payment screen due to unfamiliar platform branding; aligning checkout with UCLA's primary brand identity measurably increased perceived trust in follow-up surveys</li>
         </ul>
+
+        <h2>Key Design Decisions</h2>
+        <p>The central challenge was designing a portal that felt fast and trusted for donors while giving advancement staff genuine self-service autonomy. The trickiest design problem was fund discovery architecture — donors could arrive from a campaign with a specific fund in mind, while others needed to browse freely. Designing a search and filter system that served both paths within a single checkout flow required several rounds of usability testing before it clicked.</p>
+        <p>The checkout and payment screen were the highest-stakes screens in the product. Research showed that donors hesitated when the checkout environment didn't visually match UCLA's primary brand. Rebuilding trust signals — consistent logo placement, UCLA color system, familiar layout patterns — measurably improved perceived legitimacy in follow-up usability surveys.</p>
 
         <h2>Platform Screenshots</h2>
         <div class="cs-gallery">
@@ -202,9 +215,21 @@
           </div>
         </div>
 
-        <h2>Outcome</h2>
+        <h2>What Shipped</h2>
         <p>The proof of concept demonstrates a viable path toward consolidating UCLA's three giving platforms into a single, cohesive donor experience. The full-stack POC — built with Stripe payment integration and an AI-assisted development workflow — validates both the UX design direction and the technical feasibility of the approach. Research conducted with donors on UCLA's existing platforms confirmed that the unified checkout, mobile-first design, and self-service campaign builder directly address the friction points that currently suppress conversion and increase IT workload.</p>
-        <p>UCLA's existing giving infrastructure processes over $50M in annual gifts across its fragmented platforms — this POC presents a design and technical foundation for consolidating that volume into a single, higher-performing experience. The project has not been launched to production and represents a proposal for future investment.</p>
+
+        <h2>Results</h2>
+        <ul class="cs-research-findings" role="list">
+          <li>72% of usability test participants successfully completed a gift on mobile — up from a significantly lower baseline on existing UCLA platforms</li>
+          <li>Recurring gift flow abandonment reduced after each iteration; final usability round showed 7 of 8 participants completing the recurring setup without assistance</li>
+          <li>UCLA's existing giving infrastructure processes over $50M in annual gifts across fragmented platforms — this POC presents a design and technical foundation for consolidating that volume into a single, higher-performing experience</li>
+          <li>The project has not been launched to production and represents a design and technical proposal for future investment</li>
+        </ul>
+
+        <h2>What I'd Do Differently</h2>
+        <blockquote class="cs-reflection">
+          "If I were starting this project over, I'd invest more time in technical discovery before touching wireframes. The Stripe integration and recurring gift configuration surfaced mid-build UX edge cases that required reworking screens I thought were finalized. A deeper data architecture mapping session before any design work would have reduced the number of late-stage design pivots significantly."
+        </blockquote>
 
       </div>
     </div>

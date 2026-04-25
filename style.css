@@ -571,6 +571,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: hero-enter 0.5s var(--ease-out-expo) 0.1s both;
 }
 
+/* Intentional teal accent bar above the eyebrow label */
+.hero__eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin-bottom: var(--space-3);
+}
+
 .hero__name {
   font-size: var(--font-size-hero);
   font-family: var(--font-heading);
@@ -640,6 +651,8 @@ h1, h2, h3, h4, h5, h6 {
 .projects {
   padding-block: var(--space-section);
   background-color: var(--color-bg);
+  /* 4px teal divider — intentional visual break between dark hero and light section */
+  border-top: 4px solid var(--color-accent);
 }
 
 .projects__grid {
@@ -688,6 +701,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   text-decoration: none;
   color: inherit;
+  position: relative; /* enables absolute positioning of featured badge */
 }
 
 .project-card__link:focus-visible {
@@ -766,6 +780,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card:hover .project-card__cta {
   gap: var(--space-3);
+}
+
+/* Featured project card — visually dominant, teal top accent */
+.project-card--featured {
+  border-top: 4px solid var(--color-accent);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(0, 180, 216, 0.12);
+}
+
+/* Featured label badge — pinned to top-left of the card image */
+.project-card__featured-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: var(--color-accent);
+  color: var(--color-hero-bg);
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-subheading);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Card body — always visible metrics bar below image */
@@ -873,7 +915,8 @@ h1, h2, h3, h4, h5, h6 {
 .about__grid {
   display: grid;
   grid-template-columns: 220px 1fr 1.6fr;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  /* Consistent 2rem column gap — matches --space-8 spacing rhythm */
+  gap: var(--space-8);
   align-items: start;
 }
 
@@ -1362,6 +1405,11 @@ h1, h2, h3, h4, h5, h6 {
    13. Responsive — Mobile (≤ 767px)
    --------------------------------------------------------- */
 @media (max-width: 767px) {
+  /* Reduce section padding on mobile to 48px */
+  :root {
+    --space-section: 3rem;
+  }
+
   /* Nav */
   .nav__toggle {
     display: inline-flex;
@@ -1398,8 +1446,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-on-dark);
   }
 
-  .nav__link:hover,
-  .nav__link--active {
+  .nav__link:hover {
+    color: var(--color-text-on-dark);
+  }
+
+  .nav__link--active,
+  .nav__link[aria-current="page"] {
     color: var(--color-accent);
   }
 
@@ -1499,10 +1551,12 @@ h1, h2, h3, h4, h5, h6 {
   /* About — single column, portrait centered above text */
   .about__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-6); /* tighter gap on mobile single-col */
   }
 
   .about__portrait {
     align-items: center;
+    padding-bottom: var(--space-2); /* consistent breathing room below portrait */
   }
 
   .about__photo {

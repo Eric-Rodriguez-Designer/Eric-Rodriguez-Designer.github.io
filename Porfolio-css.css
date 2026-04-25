@@ -14,9 +14,23 @@
   max-width: 860px;
 }
 
+/* Case study body paragraphs — 17px for readability, 700px max for ~70-char line length */
+.case-study-body p {
+  font-size: 1.0625rem; /* 17px */
+  max-width: 700px;
+}
+
 /* Paragraph spacing in case study body */
 .case-study-body p + p {
   margin-top: var(--space-4);
+}
+
+/* Section intro paragraph — first <p> after an <h2> heading is slightly bolder/darker
+   to differentiate it from regular body copy */
+.case-study-body h2 + p {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
 }
 
 /* Sub-section heading rhythm */
@@ -228,6 +242,10 @@
   object-fit: cover;
   object-position: top center;
   display: block;
+  /* margin-block: 0 overridden — visual before/after images have no margin */
+  margin-block: 0 !important;
+  border-radius: 0; /* card clips the corners via overflow: hidden */
+  box-shadow: none;
 }
 
 .cs-before-after--visual figcaption {
@@ -265,8 +283,9 @@
 .cs-gallery__item img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Match --radius-card (12px) for consistency with all case study images */
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   margin-block: 0;
   transition: transform var(--transition-base),
               box-shadow var(--transition-base);

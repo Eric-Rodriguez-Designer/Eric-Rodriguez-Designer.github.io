@@ -9,21 +9,22 @@
    --------------------------------------------------------- */
 :root {
   /* Colors */
-  --color-bg:               #F4F4F5;
+  --color-bg:               #F8F9FA;
   --color-surface:          #FFFFFF;
-  --color-surface-alt:      #EAEAEC;
-  --color-hero-bg:          #0D1117;
-  --color-text-primary:     #1A1A1A;
-  --color-text-secondary:   #5C5C6E;
+  --color-surface-alt:      #F0F4F8;
+  --color-hero-bg:          #F0F4F8;          /* Light hero background */
+  --color-footer-bg:        #0D1B2A;          /* Dark navy — footer, overlays, mobile drawer */
+  --color-text-primary:     #0D1B2A;
+  --color-text-secondary:   #4A5568;
   --color-text-on-dark:     #F4F4F5;
-  --color-text-on-dark-muted: #A0A0B0;
-  --color-accent:           #00B4D8;
-  --color-accent-hover:     #0096B4;
-  --color-accent-subtle:    rgba(0, 180, 216, 0.12);
-  --color-border:           rgba(0, 0, 0, 0.08);
-  --color-focus-ring:       #00B4D8;
-  /* Accessible dark teal — use for teal text/borders on light backgrounds (contrast ≥ 4.5:1 on white, #F4F4F5, and #EAEAEC) */
-  --color-accent-dark:      #005E80;
+  --color-text-on-dark-muted: #CBD5E0;
+  --color-accent:           #2C5F8A;
+  --color-accent-hover:     #1A4A72;
+  --color-accent-subtle:    #EBF4FF;
+  --color-border:           #E2E8F0;
+  --color-focus-ring:       #2C5F8A;
+  /* Darker blue — hover states and high-contrast contexts */
+  --color-accent-dark:      #1A4A72;
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -199,17 +200,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-subheading);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-eyebrow);
-  /* Default: dark bg context — #00B4D8 on #0D1117 = 7.4:1 ✓ */
+  /* #2C5F8A on all light backgrounds ≥ 5:1 contrast ✓ */
   color: var(--color-accent);
   margin-bottom: var(--space-3);
 }
 
-/* Light-bg sections: switch to accessible dark teal (#005E80) — 5.97:1 on #F4F4F5 ✓ */
-.projects .section-eyebrow,
-.about .section-eyebrow,
-.contact-section .section-eyebrow,
-.contact-page .section-eyebrow {
-  color: var(--color-accent-dark);
+/* Dark-bg sections: use muted white for legibility */
+.testimonials .section-eyebrow {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.case-study-header .section-eyebrow {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .section-title {
@@ -250,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--primary {
   background-color: var(--color-accent);
-  color: var(--color-hero-bg);
+  color: #FFFFFF;
   border: 2px solid var(--color-accent);
 }
 
@@ -258,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 6px 20px rgba(44, 95, 138, 0.3);
 }
 
 .btn--outline {
@@ -305,8 +307,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 100;
   height: var(--nav-height);
-  background-color: rgba(13, 17, 23, 0.97);
-  border-bottom: 2px solid var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: box-shadow var(--transition-base),
@@ -314,8 +316,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header--scrolled {
-  background-color: rgba(13, 17, 23, 0.88);
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
 }
 
 .site-header .container {
@@ -350,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 30px;
   height: 30px;
   background: var(--color-accent);
-  color: var(--color-hero-bg);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.7rem;
   font-weight: 700;
@@ -369,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text-primary);
   letter-spacing: -0.02em;
   transition: color var(--transition-fast);
 }
@@ -389,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-subheading);
-  color: #fff;
+  color: var(--color-text-primary);
   text-decoration: none;
   padding-bottom: var(--space-1);
   transition: color var(--transition-fast);
@@ -406,9 +408,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: width var(--transition-base);
 }
 
-/* Hover: white text — teal underline (::after) signals the hover state without overusing teal */
+/* Hover: accent blue */
 .nav__link:hover {
-  color: var(--color-text-on-dark);
+  color: var(--color-accent);
 }
 
 /* Active / current page: teal text + teal underline */
@@ -436,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.4rem 1.1rem;
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-full);
-  color: #fff;
+  color: var(--color-accent);
   font-family: var(--font-heading);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-subheading);
@@ -449,7 +451,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__cta:hover {
   background-color: var(--color-accent);
-  color: var(--color-hero-bg);
+  color: #FFFFFF;
 }
 
 .nav__cta:focus-visible {
@@ -494,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   place-items: center;
   background-color: var(--color-hero-bg);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-primary);
   overflow: hidden;
 }
 
@@ -514,7 +516,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-accent);
   border-radius: 50%;
   filter: blur(130px);
-  opacity: 0.07;
+  opacity: 0.04;
   top: -200px;
   right: -150px;
   transform: translateY(calc(var(--scroll-y) * 0.15px));
@@ -528,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-accent);
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.05;
+  opacity: 0.03;
   bottom: -100px;
   left: -80px;
 }
@@ -549,8 +551,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 3px solid #00B4D8;
-  box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 4px 16px rgba(44, 95, 138, 0.2);
   flex-shrink: 0;
 }
 
@@ -587,7 +589,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
   letter-spacing: var(--letter-spacing-heading);
-  color: var(--color-text-on-dark);
+  color: var(--color-text-primary);
   line-height: 1.05;
   margin-bottom: var(--space-6);
   animation: hero-enter 0.5s var(--ease-out-expo) 0.25s both;
@@ -595,7 +597,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero__tagline {
   font-size: var(--font-size-lg);
-  color: var(--color-text-on-dark-muted);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   max-width: 580px;
   margin-bottom: var(--space-12);
@@ -629,7 +631,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-text-on-dark-muted);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -687,6 +689,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-card);
   overflow: hidden;
   background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
   transition: box-shadow var(--transition-base),
               transform var(--transition-base);
@@ -782,10 +785,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-3);
 }
 
-/* Featured project card — visually dominant, teal top accent */
+/* Featured project card — visually dominant, blue top accent */
 .project-card--featured {
   border-top: 4px solid var(--color-accent);
-  box-shadow: var(--shadow-card), 0 0 0 1px rgba(0, 180, 216, 0.12);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(44, 95, 138, 0.12);
 }
 
 /* Featured label badge — pinned to top-left of the card image */
@@ -799,7 +802,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 4px;
   padding: 3px 10px;
   background: var(--color-accent);
-  color: var(--color-hero-bg);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.625rem;
   font-weight: var(--font-weight-subheading);
@@ -824,8 +827,8 @@ h1, h2, h3, h4, h5, h6 {
 .project-card__stat {
   font-size: 0.7rem;
   font-weight: var(--font-weight-subheading);
-  /* Dark teal on accent-subtle bg — #005E80 on rgba(0,180,216,0.12)/white = 5.9:1 ✓ */
-  color: var(--color-accent-dark);
+  /* #2C5F8A on #EBF4FF = 5.2:1 ✓ */
+  color: var(--color-accent);
   background: var(--color-accent-subtle);
   padding: 3px var(--space-3);
   border-radius: var(--radius-full);
@@ -837,7 +840,7 @@ h1, h2, h3, h4, h5, h6 {
    --------------------------------------------------------- */
 .testimonials {
   padding-block: var(--space-section);
-  background-color: var(--color-hero-bg);
+  background-color: var(--color-footer-bg);
   color: var(--color-text-on-dark);
 }
 
@@ -944,17 +947,15 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   object-position: center 15%;
   border-radius: var(--radius-card);
-  border: 2px solid var(--color-accent-subtle);
-  box-shadow: 0 0 0 4px var(--color-accent-subtle),
-              var(--shadow-card);
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 4px 16px rgba(44, 95, 138, 0.2);
   transition: box-shadow var(--transition-base),
               transform var(--transition-base);
 }
 
 .about__photo:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.25),
-              var(--shadow-card-hover);
+  box-shadow: 0 4px 24px rgba(44, 95, 138, 0.3);
 }
 
 /* --- Skills column --- */
@@ -1005,12 +1006,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-pills li:hover {
   background-color: var(--color-accent);
-  color: var(--color-hero-bg);
+  color: #FFFFFF;
 }
 
 .skill-pill--featured {
   background-color: var(--color-accent) !important;
-  color: var(--color-hero-bg) !important;
+  color: #FFFFFF !important;
   font-weight: var(--font-weight-subheading) !important;
 }
 
@@ -1093,7 +1094,7 @@ h1, h2, h3, h4, h5, h6 {
    10. Footer
    --------------------------------------------------------- */
 .site-footer {
-  background-color: var(--color-hero-bg);
+  background-color: var(--color-footer-bg);
   color: var(--color-text-on-dark);
   padding-block: var(--space-8);
 }
@@ -1173,7 +1174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .case-study-header {
   padding-block: var(--space-section);
-  background-color: var(--color-hero-bg);
+  background-color: var(--color-accent);
   color: var(--color-text-on-dark);
 }
 
@@ -1260,6 +1261,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-subheading);
   font-size: var(--font-size-sm);
   margin-bottom: var(--space-8);
+  text-decoration: none;
   transition: gap var(--transition-fast);
 }
 
@@ -1436,7 +1438,7 @@ h1, h2, h3, h4, h5, h6 {
     right: -100%;
     width: min(280px, 82vw);
     height: 100dvh;
-    background-color: var(--color-hero-bg);
+    background-color: var(--color-footer-bg);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;

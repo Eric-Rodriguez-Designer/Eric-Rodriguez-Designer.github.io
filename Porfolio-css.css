@@ -64,8 +64,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  /* #00B4D8 on #F4F4F5 = 2.2:1 ✗ — use accent-dark (#005E80) = 5.97:1 ✓ */
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
   font-weight: var(--font-weight-subheading);
   font-size: var(--font-size-sm);
   margin-bottom: var(--space-12);
@@ -167,8 +166,7 @@
 }
 
 .cs-before-after__col--after .cs-before-after__label {
-  /* #00B4D8 on white = 2.4:1 ✗ — use accent-dark (#005E80) = 6.5:1 ✓ */
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
 }
 
 .cs-before-after__list {
@@ -198,8 +196,7 @@
 
 .cs-before-after__col--after .cs-before-after__list li::before {
   content: '✓ ';
-  /* #00B4D8 on white = 2.4:1 ✗ — use accent-dark = 6.5:1 ✓ */
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
   font-size: 0.65rem;
   vertical-align: 1px;
 }
@@ -230,10 +227,9 @@
 }
 
 .cs-before-after--visual .cs-before-after__col--after .cs-before-after__label {
-  background: rgba(0, 180, 216, 0.08);
+  background: rgba(44, 95, 138, 0.08);
   border-bottom: 2px solid var(--color-accent);
-  /* #00B4D8 on near-white = 2.3:1 ✗ — use accent-dark (#005E80) = 5.9:1 ✓ */
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
 }
 
 .cs-before-after--visual img {

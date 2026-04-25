@@ -912,6 +912,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-surface-alt);
 }
 
+/* About lead paragraph — bio intro before the skills/experience grid */
+.about__lead {
+  font-size: 1.125rem; /* 18px — slightly larger than 17px body */
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+
 .about__grid {
   display: grid;
   grid-template-columns: 220px 1fr 1.6fr;

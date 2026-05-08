@@ -23,6 +23,80 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="Porfolio-css.css">
   <script src="https://kit.fontawesome.com/0774aa494d.js" crossorigin="anonymous" defer></script>
+
+  <style>
+    /* ── AI-Assisted Design Process section ──────────────────────────────── */
+    .cs-ai-section {
+      background: #f0fdfa;
+      border-top: 3px solid #0d9488;
+      border-bottom: 1px solid #ccfbf1;
+      border-radius: 12px;
+      padding: 2rem 2.25rem 2.25rem;
+      margin: 2.5rem 0;
+    }
+    .cs-ai-section__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #0d9488;
+      margin-bottom: 0.6rem;
+    }
+    /* Override h2 bottom-margin for the heading inside the teal card */
+    .cs-ai-section > h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #134e4a;
+    }
+    .cs-ai-section__intro {
+      color: #374151;
+      margin-bottom: 1.75rem;
+      max-width: 72ch;
+    }
+    .cs-ai-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .cs-ai-card {
+      background: #ffffff;
+      border-left: 4px solid #0d9488;
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.25rem 1.25rem 1.125rem;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 0.06);
+    }
+    .cs-ai-card__title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 0.5rem;
+    }
+    .cs-ai-card__title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #0d9488;
+      border-radius: 50%;
+      margin-right: 0.45rem;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    .cs-ai-card__desc {
+      font-size: 0.88rem;
+      color: #4b5563;
+      line-height: 1.65;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .cs-ai-section { padding: 1.5rem 1.25rem 1.75rem; }
+      .cs-ai-cards   { grid-template-columns: 1fr; }
+    }
+  </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QCWH37CGN"></script>
   <script>
@@ -146,6 +220,38 @@
           <li>Gift officers cited "waiting for IT to build a campaign page" as their #1 pain point — average wait time was 3–4 weeks per request</li>
           <li>Donors expressed hesitation on the payment screen due to unfamiliar platform branding; aligning checkout with UCLA's primary brand identity measurably increased perceived trust in follow-up surveys</li>
         </ul>
+
+        <!-- ── AI-Assisted Design Process ──────────────────────────────── -->
+        <div class="cs-ai-section">
+          <p class="cs-ai-section__eyebrow" aria-hidden="true">
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i> AI-Assisted Workflow
+          </p>
+          <h2>AI-Assisted Design Process</h2>
+          <p class="cs-ai-section__intro">This project was an early example of integrating AI tools into every stage of the design process — not just for speed, but to improve the quality of research synthesis and stakeholder communication.</p>
+          <div class="cs-ai-cards" role="list">
+
+            <div class="cs-ai-card" role="listitem">
+              <h3 class="cs-ai-card__title">Research Synthesis</h3>
+              <p class="cs-ai-card__desc">Conducted user interviews with UCLA donors and giving platform users, then used Claude to synthesize interview notes into key themes, pain points, and opportunity areas — reducing analysis time significantly while surfacing insights that might have been missed manually.</p>
+            </div>
+
+            <div class="cs-ai-card" role="listitem">
+              <h3 class="cs-ai-card__title">BRD Creation</h3>
+              <p class="cs-ai-card__desc">Instead of manually writing a Business Requirements Document from scratch, used Claude to fast-track BRD creation from interview notes and requirements sessions — producing a comprehensive document that was shared with senior leadership and the engineering team.</p>
+            </div>
+
+            <div class="cs-ai-card" role="listitem">
+              <h3 class="cs-ai-card__title">Rapid Prototyping with Figma Make</h3>
+              <p class="cs-ai-card__desc">Used Figma Make to rapidly prototype the giving experience in alignment with UCLA brand guidelines and real user requirements gathered from interviews — enabling faster iteration and stakeholder feedback cycles.</p>
+            </div>
+
+            <div class="cs-ai-card" role="listitem">
+              <h3 class="cs-ai-card__title">Interactive POC for Senior Leadership</h3>
+              <p class="cs-ai-card__desc">Built a fully interactive proof of concept using Claude Code that senior leadership could actually use and interact with — replacing static wireframes with a working prototype that demonstrated the full donation flow, fund selection, and giving options. This created significant excitement and accelerated executive buy-in.</p>
+            </div>
+
+          </div>
+        </div>
 
         <h2>Key Design Decisions</h2>
         <p>The central challenge was designing a portal that felt fast and trusted for donors while giving advancement staff genuine self-service autonomy. The trickiest design problem was fund discovery architecture — donors could arrive from a campaign with a specific fund in mind, while others needed to browse freely. Designing a search and filter system that served both paths within a single checkout flow required several rounds of usability testing before it clicked.</p>

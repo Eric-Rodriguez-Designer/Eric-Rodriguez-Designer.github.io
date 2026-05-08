@@ -140,7 +140,6 @@
         <span class="section-eyebrow">Case Study</span>
         <h1>UCLA Online Giving Portal</h1>
         <p class="case-study-subtitle">UX research and full-stack proof of concept for a unified giving portal — consolidating three UCLA donation platforms into one cohesive donor experience</p>
-        <span class="cs-poc-badge"><i class="fa-solid fa-flask" aria-hidden="true"></i> Proof of Concept</span>
         <div class="case-study-meta">
           <div class="case-study-meta__item">
             <span class="case-study-meta__label">Role</span>
@@ -154,10 +153,6 @@
             <span class="case-study-meta__label">Tools</span>
             <span class="case-study-meta__value">Figma · WordPress · Stripe · Claude AI</span>
           </div>
-          <div class="case-study-meta__item">
-            <span class="case-study-meta__label">Status</span>
-            <span class="case-study-meta__value">Proof of Concept · Not Yet Launched · Full-Stack Build</span>
-          </div>
         </div>
       </div>
     </div>
@@ -168,7 +163,7 @@
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Projects
         </a>
 
-        <div class="cs-poc-notice" role="note" aria-label="Project status notice">
+        <div class="cs-poc-notice" role="note" aria-label="Project status notice" style="display:none;">
           <i class="fa-solid fa-triangle-exclamation cs-poc-notice__icon" aria-hidden="true"></i>
           <p class="cs-poc-notice__text">
             <strong>Proof of Concept — Not Launched to Production</strong>
@@ -216,7 +211,7 @@
 
         <h2>Research Findings</h2>
         <ul class="cs-research-findings" role="list">
-          <li>72% of test participants completed a gift on mobile during usability testing, but 4 of 8 initially abandoned the recurring gift flow due to unclear configuration language</li>
+          <li>Research with existing UCLA donors revealed that donors were dropping off before completing payment on the current giving platforms, particularly on mobile — validating the need for a simplified, mobile-first checkout experience.</li>
           <li>Gift officers cited "waiting for IT to build a campaign page" as their #1 pain point — average wait time was 3–4 weeks per request</li>
           <li>Donors expressed hesitation on the payment screen due to unfamiliar platform branding; aligning checkout with UCLA's primary brand identity measurably increased perceived trust in follow-up surveys</li>
         </ul>
@@ -297,6 +292,7 @@
 
         </div>
 
+        <div style="display:none;">
         <h2>Before &amp; After</h2>
         <div class="cs-before-after">
           <div class="cs-before-after__col cs-before-after__col--before">
@@ -320,8 +316,9 @@
             </ul>
           </div>
         </div>
+        </div>
 
-        <h2>What Shipped</h2>
+        <h2>What Was Built</h2>
         <p>The proof of concept demonstrates a viable path toward consolidating UCLA's three giving platforms into a single, cohesive donor experience. The full-stack POC — built with Stripe payment integration and an AI-assisted development workflow — validates both the UX design direction and the technical feasibility of the approach. Research conducted with donors on UCLA's existing platforms confirmed that the unified checkout, mobile-first design, and self-service campaign builder directly address the friction points that currently suppress conversion and increase IT workload.</p>
 
         <h2>Results</h2>
@@ -330,10 +327,12 @@
           <li>The project has not been launched to production and represents a design and technical proposal for future investment</li>
         </ul>
 
+        <div style="display:none;">
         <h2>What I'd Do Differently</h2>
         <blockquote class="cs-reflection">
           "If I were starting this project over, I'd invest more time in technical discovery before touching wireframes. The Stripe integration and recurring gift configuration surfaced mid-build UX edge cases that required reworking screens I thought were finalized. A deeper data architecture mapping session before any design work would have reduced the number of late-stage design pivots significantly."
         </blockquote>
+        </div>
 
       </div>
     </div>
